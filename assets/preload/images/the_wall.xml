@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="the_wall.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="THE BG0000" x="0" y="0" width="2485" height="1037"/>
+	<SubTexture name="THE BG0001" x="2485" y="0" width="2485" height="1037"/>
+	<SubTexture name="THE BG0002" x="4970" y="0" width="2485" height="1037"/>
+	<SubTexture name="THE BG0003" x="0" y="1037" width="2485" height="1037"/>
+	<SubTexture name="THE BG0004" x="2485" y="1037" width="2485" height="1037"/>
+	<SubTexture name="THE BG0005" x="4970" y="1037" width="2485" height="1037"/>
+	<SubTexture name="THE BG0006" x="0" y="2074" width="2485" height="1037"/>
+	<SubTexture name="THE BG0007" x="2485" y="2074" width="2485" height="1037"/>
+	<SubTexture name="THE BG0008" x="4970" y="2074" width="2485" height="1037"/>
+	<SubTexture name="THE BG0009" x="0" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0010" x="2485" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0011" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0012" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0013" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0014" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0015" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0016" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0017" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0018" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0019" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0020" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0021" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0022" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0023" x="0" y="4148" width="1491" height="954" frameX="-627" frameY="-83" frameWidth="2485" frameHeight="1037"/>
+	<SubTexture name="THE BG0024" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0025" x="0" y="4148" width="1491" height="954" frameX="-627" frameY="-83" frameWidth="2485" frameHeight="1037"/>
+	<SubTexture name="THE BG0026" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0027" x="0" y="4148" width="1491" height="954" frameX="-627" frameY="-83" frameWidth="2485" frameHeight="1037"/>
+	<SubTexture name="THE BG0028" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0029" x="0" y="4148" width="1491" height="954" frameX="-627" frameY="-83" frameWidth="2485" frameHeight="1037"/>
+	<SubTexture name="THE BG0030" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0031" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0032" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0033" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0034" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0035" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0036" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0037" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0038" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0039" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0040" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0041" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0042" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0043" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0044" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0045" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0046" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0047" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0048" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0049" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0050" x="0" y="4148" width="1491" height="954" frameX="-627" frameY="-83" frameWidth="2485" frameHeight="1037"/>
+	<SubTexture name="THE BG0051" x="0" y="4148" width="1491" height="954" frameX="-627" frameY="-83" frameWidth="2485" frameHeight="1037"/>
+	<SubTexture name="THE BG0052" x="4970" y="3111" width="2485" height="1037"/>
+	<SubTexture name="THE BG0053" x="4970" y="3111" width="2485" height="1037"/>
+</TextureAtlas>

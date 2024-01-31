@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="visualiser.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="visualiser0000" x="0" y="0" width="1966" height="980" frameX="0" frameY="-104" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0001" x="1966" y="0" width="1966" height="798" frameX="0" frameY="-286" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0002" x="3932" y="0" width="1966" height="625" frameX="0" frameY="-460" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0003" x="5898" y="0" width="1966" height="489" frameX="0" frameY="-596" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0004" x="0" y="980" width="1966" height="357" frameX="0" frameY="-728" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0005" x="1966" y="980" width="1966" height="276" frameX="0" frameY="-809" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0006" x="1966" y="980" width="1966" height="276" frameX="0" frameY="-809" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0007" x="1966" y="980" width="1966" height="276" frameX="0" frameY="-809" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0008" x="3932" y="980" width="1966" height="1084" frameX="0" frameY="0" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0009" x="5898" y="980" width="1966" height="899" frameX="0" frameY="-186" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0010" x="0" y="2064" width="1966" height="737" frameX="0" frameY="-348" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0011" x="1966" y="2064" width="1966" height="589" frameX="0" frameY="-496" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0012" x="3932" y="2064" width="1966" height="472" frameX="0" frameY="-613" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0013" x="1966" y="980" width="1966" height="276" frameX="0" frameY="-809" frameWidth="1966" frameHeight="1085"/>
+	<SubTexture name="visualiser0014" x="1966" y="980" width="1966" height="276" frameX="0" frameY="-809" frameWidth="1966" frameHeight="1085"/>
+</TextureAtlas>

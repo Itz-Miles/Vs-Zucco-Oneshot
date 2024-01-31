@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="transition.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="door closing0000" x="0" y="0" width="1444" height="2026"/>
+	<SubTexture name="door closing0001" x="1448" y="0" width="1444" height="1806" frameX="0" frameY="-110" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0002" x="1448" y="0" width="1444" height="1806" frameX="0" frameY="-110" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0003" x="2896" y="0" width="1444" height="1602" frameX="0" frameY="-212" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0004" x="4344" y="0" width="1444" height="1121" frameX="0" frameY="-451" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0005" x="4344" y="0" width="1444" height="1121" frameX="0" frameY="-451" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0006" x="5792" y="0" width="1435" height="1116" frameX="-3" frameY="-453" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0007" x="5792" y="0" width="1435" height="1116" frameX="-3" frameY="-453" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0008" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0009" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0010" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0011" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0012" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0013" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0014" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0015" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0016" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0017" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0018" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door closing0019" x="0" y="2030" width="1435" height="1105" frameX="-3" frameY="-458" frameWidth="1444" frameHeight="2026"/>
+	<SubTexture name="door opening0000" x="1439" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0001" x="2878" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0002" x="2878" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0003" x="2878" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0004" x="2878" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0005" x="2878" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0006" x="2878" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0007" x="2878" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0008" x="2878" y="2030" width="1435" height="1105" frameX="-3" frameY="-346" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0009" x="4317" y="2030" width="1435" height="1101" frameX="-3" frameY="-348" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0010" x="4317" y="2030" width="1435" height="1101" frameX="-3" frameY="-348" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0011" x="5756" y="2030" width="1435" height="1284" frameX="-3" frameY="-257" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0012" x="5756" y="2030" width="1435" height="1284" frameX="-3" frameY="-257" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0013" x="0" y="3318" width="1435" height="1488" frameX="-3" frameY="-155" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0014" x="1439" y="3318" width="1444" height="1802"/>
+	<SubTexture name="door opening0015" x="2887" y="3318" width="1444" height="1802" frameX="-3" frameY="-341" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0016" x="2887" y="3318" width="1444" height="1802" frameX="-3" frameY="-341" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0017" x="2887" y="3318" width="1444" height="1802" frameX="-3" frameY="-341" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0018" x="2887" y="3318" width="1444" height="1802" frameX="-3" frameY="-341" frameWidth="1444" frameHeight="1802"/>
+	<SubTexture name="door opening0019" x="2887" y="3318" width="1444" height="1802" frameX="-3" frameY="-341" frameWidth="1444" frameHeight="1802"/>
+</TextureAtlas>

@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "dies"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				65
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "dead confirm",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-33,
+				38
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "dead loop"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pogoded",
+	"position": [
+		-60,
+		240
+	],
+	"healthicon": "boi",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-80,
+		-50
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}

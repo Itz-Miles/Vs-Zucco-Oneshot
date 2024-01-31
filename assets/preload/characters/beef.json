@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				2,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "dance left"
+		},
+		{
+			"offsets": [
+				1,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "dance right"
+		},
+		{
+			"offsets": [
+				32,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "cheer",
+			"loop": false,
+			"name": "cheer"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/beef",
+	"position": [
+		80,
+		300
+	],
+	"healthicon": "boi",
+	"flip_x": false,
+	"healthbar_colors": [
+		33,
+		205,
+		224
+	],
+	"camera_position": [
+		-110,
+		-100
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

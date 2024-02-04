@@ -1,0 +1,9 @@
+{
+	"directory": "schoolbreak",
+	"defaultZoom": 0.7,
+	"isPixelStage": false,
+
+	"boyfriend": [1100, 350],
+	"girlfriend": [450, 370],
+	"opponent": [-50, 350]
+}

@@ -4,11 +4,6 @@ function onCreate()
 	addLuaSprite('back', false);
 	
 	
-	makeLuaSprite('overlay', 'bgschool/overlay', -1000, 150);
-	scaleObject('overlay', 1.2, 1.2);
-	addLuaSprite('overlay', false);
-	
-	
 	makeLuaSprite('front', 'bgschool/front', -1000, 150);
 	scaleObject('front', 1.2, 1.2);
 	addLuaSprite('front', false);
@@ -18,6 +13,10 @@ function onCreate()
 	luaSpriteAddAnimationByPrefix('zucco', 'idle', 'zucco', 24, true);
 	scaleObject('zucco', 1.2, 1.2);
 	addLuaSprite('zucco', false);
+
+	makeLuaSprite('overlay', 'bgschool/overlay', -1000, 150);
+	scaleObject('overlay', 1.2, 1.2);
+	addLuaSprite('overlay', true);
 	
 	
 

@@ -112,7 +112,7 @@ Vs Zucco is not an official Funkin' product. Not assosiated with The Funkin' Cre
 ## Psych Engine
 * Shadow Mario - Programmer/Owner of Psych <img src="./assets/preload/images/credits/shadowmario.png" width="16">
 * shubs - New Input System <img src="./assets/preload/images/credits/shubs.png" width="16">
-* PolybiusProxy - HxCodec Video Support <img src="./assets/preload/images/credits/polybiusproxy.png" width="16">
+* PolybiusProxy - HxCodec Video Support <img src="./assets/preload/images/credits/proxy.png" width="16">
 * Keoiki - Note Splash Animations <img src="./assets/preload/images/credits/keoiki.png" width="16">
 * github - [contributors](https://github.com/ShadowMario/FNF-PsychEngine/graphs/contributors) <img src= "./assets/preload/images/credits/github.png" width="16">
 

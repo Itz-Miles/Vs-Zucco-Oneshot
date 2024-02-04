@@ -1,104 +1,125 @@
-# Friday Night Funkin' - Psych Engine
-Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
+<!--This is the markdown readme. View the pretty format on the webpage:
+example.com
+-->
+![logo](./assets/preload/images/logo.png)
+___
+# Source for Vs Zucco: a mod to Friday Night Funkin'
+If you just want to funkin' play Vs Zucco, play it [here](https://example.com).
 
-## Installation:
-You must have [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
+If you just want to funkin' download Vs Zucco, visit [releases](https://example.com).
 
-Follow a Friday Night Funkin' source code compilation tutorial, after this you will need to install LuaJIT.
+If you just want to know what the funk Vs Zucco is, visit the [webpage](https://example.com)!
 
-To install LuaJIT do this: `haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit` on a Command prompt/PowerShell
+# Building From Source
 
-...Or if you don't want your mod to be able to run .lua scripts, delete the "LUA_ALLOWED" line on Project.xml
+## Haxe
+You must have [the most up-to-date version of Haxe](https://haxe.org/download/) (4.3.1+) in order to compile.
 
+## Visual Studio / Visual Studio Code
 
-If you get an error about StatePointer when using Lua, run `haxelib remove linc_luajit` into Command Prompt/PowerShell, then re-install linc_luajit.
+Install [Visual Studio Code](https://code.visualstudio.com/download).
 
-If you want video support on your mod, simply do `haxelib install hxCodec` on a Command prompt/PowerShell
+For language support, debugging, linting, and documentation, install the [Vs Haxe Extension Pack](https://marketplace.visualstudio.com/items?itemName=vshaxe.haxe-extension-pack).
 
-otherwise, you can delete the "VIDEOS_ALLOWED" Line on Project.xml
+For Lime / OpenFL project support, install the [Lime Extension](https://marketplace.visualstudio.com/items?itemName=openfl.lime-vscode-extension).
 
-## Credits:
-* Shadow Mario - Programmer
-* RiverOaken - Artist
-* Yoshubs - Assistant Programmer
+`windows` For compiling the game on windows, install [Visual Studio 19](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2019-and-other-products) and ONLY these components:
+```
+MSVC v142 - VS 2019 C++ x64/x86 build tools
+Windows SDK (10.0.17763.0)
+```
 
-### Special Thanks
-* bbpanzu - Ex-Programmer
-* shubs - New Input System
-* SqirraRNG - Crash Handler and Base code for Chart Editor's Waveform
-* KadeDev - Fixed some cool stuff on Chart Editor and other PRs
-* iFlicky - Composer of Psync and Tea Time, also made the Dialogue Sounds
-* PolybiusProxy - .MP4 Video Loader Library (hxCodec)
-* Keoiki - Note Splash Animations
-* Smokey - Sprite Atlas Support
-* Nebula the Zorua - LUA JIT Fork and some Lua reworks
-_____________________________________
+## Command Prompt/Terminal
 
-# Features
+ These methods send you to a terminal, which will be used to install libraries and compile the game.
+ 
+`windows`
+```
+Vs Code: View > Terminal 
 
-## Attractive animated dialogue boxes:
+Start Menu: Click on the Start button, type "PowerShell" or "Command Prompt" in the search bar, and select the respective application from the search results.
 
-![](https://user-images.githubusercontent.com/44785097/127706669-71cd5cdb-5c2a-4ecc-871b-98a276ae8070.gif)
+File Explorer: Navigate to the desired location and enter "powershell" or "cmd" in the address bar to open with the current location set as the working directory.
 
+Run Dialog: Press the Windows key + R to open the Run dialog, type "powershell" or "cmd", and press Enter.
+```
 
-## Mod Support
-* Probably one of the main points of this engine, you can code in .lua files outside of the source code, making your own weeks without even messing with the source!
-* Comes with a Mod Organizing/Disabling Menu.
+`mac`
+```
+Vs Code: View > Terminal
 
+Spotlight Search: Press Command + Space to open Spotlight Search, type "Terminal," and press Enter.
 
-## Atleast one change to every week:
-### Week 1:
-  * New Dad Left sing sprite
-  * Unused stage lights are now used
-### Week 2:
-  * Both BF and Skid & Pump does "Hey!" animations
-  * Thunders does a quick light flash and zooms the camera in slightly
-  * Added a quick transition/cutscene to Monster
-### Week 3:
-  * BF does "Hey!" during Philly Nice
-  * Blammed has a cool new colors flash during that sick part of the song
-### Week 4:
-  * Better hair physics for Mom/Boyfriend (Maybe even slightly better than Week 7's :eyes:)
-  * Henchmen die during all songs. Yeah :(
-### Week 5:
-  * Bottom Boppers and GF does "Hey!" animations during Cocoa and Eggnog
-  * On Winter Horrorland, GF bops her head slower in some parts of the song.
-### Week 6:
-  * On Thorns, the HUD is hidden during the cutscene
-  * Also there's the Background girls being spooky during the "Hey!" parts of the Instrumental
+Finder: Open the Finder, go to the "Applications" folder, open the "Utilities" folder, and double-click on the "Terminal" application.
 
-## Cool new Chart Editor changes and countless bug fixes
-![](https://github.com/ShadowMario/FNF-PsychEngine/blob/main/docs/img/chart.png?raw=true)
-* You can now chart "Event" notes, which are bookmarks that trigger specific actions that usually were hardcoded on the vanilla version of the game.
-* Your song's BPM can now have decimal values
-* You can manually adjust a Note's strum time if you're really going for milisecond precision
-* You can change a note's type on the Editor, it comes with two example types:
-  * Alt Animation: Forces an alt animation to play, useful for songs like Ugh/Stress
-  * Hey: Forces a "Hey" animation instead of the base Sing animation, if Boyfriend hits this note, Girlfriend will do a "Hey!" too.
+Launchpad: Open the Launchpad (icon looks like a rocket in the Dock), type "Terminal" in the search bar, and click on the Terminal app.
+```
 
-## Multiple editors to assist you in making your own Mod
-![Screenshot_3](https://user-images.githubusercontent.com/44785097/144629914-1fe55999-2f18-4cc1-bc70-afe616d74ae5.png)
-* Working both for Source code modding and Downloaded builds!
+`linux`
+```
+Ain't no way I'm compiling the game on every single linux distro. Try stuff out and see!
+```
 
-## Story mode menu rework:
-![](https://i.imgur.com/UB2EKpV.png)
-* Added a different BG to every song (less Tutorial)
-* All menu characters are now in individual spritesheets, makes modding it easier.
+## Haxe Module Manager
+To install HMM for installing and managing libraries needed for Vs Zucco, run the following command:
+`haxelib install hmm`
 
-## Credits menu
-![Screenshot_1](https://user-images.githubusercontent.com/44785097/144632635-f263fb22-b879-4d6b-96d6-865e9562b907.png)
-* You can add a head icon, name, description and a Redirect link for when the player presses Enter while the item is currently selected.
+To install the libraries listed in hmm.json, run the following command:
+`haxelib run hmm install`
 
-## Awards/Achievements
-* The engine comes with 16 example achievements that you can mess with and learn how it works (Check Achievements.hx and search for "checkForAchievement" on PlayState.hx)
+## Compilation
+Run the correlating commands in the terminal that match your build target to compile.
 
-## Options menu:
-* You can change Note colors, Delay and Combo Offset, Controls and Preferences there.
- * On Preferences you can toggle Downscroll, Middlescroll, Anti-Aliasing, Framerate, Low Quality, Note Splashes, Flashing Lights, etc.
+`windows`
+```
+lime test windows
+lime test windows -debug
+lime build windows
+```
 
-## Other gameplay features:
-* When the enemy hits a note, their strum note also glows.
-* Lag doesn't impact the camera movement and player icon scaling anymore.
-* Some stuff based on Week 7's changes has been put in (Background colors on Freeplay, Note splashes)
-* You can reset your Score on Freeplay/Story Mode by pressing Reset button.
-* You can listen to a song or adjust Scroll Speed/Damage taken/etc. on Freeplay by pressing Space.
+`linux`
+```
+lime test linux
+lime test linux debug
+lime build linux
+```
+
+`html5`
+``` 
+lime test html5
+lime test html5 -debug
+lime build html5
+```
+
+`mac`
+```
+lime test mac
+lime test mac -debug
+lime build mac
+```
+
+# Credits:
+
+ ©Vs Zucco Team 2024 - Some rights reserved.
+
+Vs Zucco is not an official Funkin' product. Not assosiated with The Funkin' Crew.
+
+## Vs Zucco Team
+* name w/hyperlink - contribution
+* [It'z_Miles](https://twitter.com/Itz_MilesDev) - Programmer/ParallaxLT <img src="./assets/preload/images/credits/miles.png" width="16">
+* github - [contributors](https://github.com) <img src= "./assets/preload/images/credits/github.png" width="16">
+
+## Psych Engine
+* Shadow Mario - Programmer/Owner of Psych <img src="./assets/preload/images/credits/shadowmario.png" width="16">
+* shubs - New Input System <img src="./assets/preload/images/credits/shubs.png" width="16">
+* PolybiusProxy - HxCodec Video Support <img src="./assets/preload/images/credits/polybiusproxy.png" width="16">
+* Keoiki - Note Splash Animations <img src="./assets/preload/images/credits/keoiki.png" width="16">
+* github - [contributors](https://github.com/ShadowMario/FNF-PsychEngine/graphs/contributors) <img src= "./assets/preload/images/credits/github.png" width="16">
+
+## Funkin' Crew
+* ninjamuffin99 - Programmer of Friday Night Funkin' <img src="./assets/preload/images/credits/ninjamuffin99.png" width="16">
+* PhantomArcade -	Animator of Friday Night Funkin' <img src="./assets/preload/images/credits/phantomarcade.png" width="16">
+* evilsk8r - Artist of Friday Night Funkin' <img src="./assets/preload/images/credits/evilsk8r.png" width="16">
+* kawaisprite - Composer of Friday Night Funkin' <img src="./assets/preload/images/credits/kawaisprite.png" width="16">
+* github - [contributors](https://github.com/FunkinCrew/Funkin/graphs/contributors) <img src= "./assets/preload/images/credits/github.png" width="16">
+

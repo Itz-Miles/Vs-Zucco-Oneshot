@@ -881,7 +881,7 @@ class PlayState extends MusicBeatState
 
 		switch (Paths.formatToSongPath(SONG.song))
 		{
-			case '5chool-bre4k':
+			case 'schoolbreak':
 				GameOverSubstate.characterName = 'pogo_death';
 				GameOverSubstate.loopSoundName = 'zuccoDeath';
 				GameOverSubstate.endSoundName = 'zuccoRetry';

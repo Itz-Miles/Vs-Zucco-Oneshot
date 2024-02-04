@@ -469,6 +469,9 @@ class TitleState extends MusicBeatState
 					}
 					else
 					{
+						FlxTransitionableState.skipNextTransIn = true;
+						FlxTransitionableState.skipNextTransOut = true;
+						// Seems to be some initialization issues with the custom fade. Remove later!
 						MusicBeatState.switchState(new MainMenuState());
 					}
 					closedState = true;

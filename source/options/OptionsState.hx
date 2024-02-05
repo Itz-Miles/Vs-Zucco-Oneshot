@@ -21,6 +21,7 @@ import haxe.Json;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
+import flixel.addons.display.FlxBackdrop;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
@@ -53,19 +54,37 @@ class OptionsState extends MusicBeatState
 
 	var selectorLeft:Alphabet;
 	var selectorRight:Alphabet;
+	var cinematic:FlxSprite;
+	var checker:FlxSprite;
 
 	override function create() {
 		#if desktop
 		DiscordClient.changePresence("Options Menu", null);
 		#end
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xFFea71fd;
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('gradientbg'));
 		bg.updateHitbox();
 
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
+
+		var cinematic:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('cinematicbar'));
+		cinematic.setGraphicSize(Std.int(bg.width * 1.175));
+		cinematic.updateHitbox();
+		cinematic.screenCenter();
+		cinematic.antialiasing = ClientPrefs.globalAntialiasing;
+		add(cinematic);
+
+		checker = new FlxBackdrop(Paths.image('chesslooking'), XY, 0, 0);
+		checker.scrollFactor.set(0, 0.1);
+		checker.y -= 80;
+		checker.color = 0xFF3A4262;
+		add(checker);
+
+		checker.offset.x -= 0;
+		checker.offset.y += 0;
+		checker.velocity.x = 20;
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);

@@ -539,7 +539,31 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'hallway':
-			trace('a');
+			var back:FlxSprite = new FlxSprite(-1000, 150, Paths.image("back"));
+			back.scale.set(1.2, 1.2);
+			add(back);
+
+			var front:FlxSprite = new FlxSprite(-1000, 150, Paths.image("front"));
+			front.scale.set(1.2, 1.2);
+			add(front);
+
+			var zucco:FlxSprite = new FlxSprite(-200, 550);
+			zucco.scale.set(1.2, 1.2);
+			add(zucco);
+
+
+			/*
+			not doen witrh these yet gotta go to bed
+			makeAnimatedLuaSprite('zucco', 'zucco', -200, 550)
+			luaSpriteAddAnimationByPrefix('zucco', 'idle', 'zucco', 24, true);
+			scaleObject('zucco', 1.2, 1.2);
+			addLuaSprite('zucco', true);
+		
+			makeLuaSprite('overlay', 'overlay', -1000, 150);
+			scaleObject('overlay', 1.2, 1.2);
+			addLuaSprite('overlay', true);
+			*/
+
 			case 'stage': // Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);

@@ -4410,8 +4410,8 @@ class PlayState extends MusicBeatState
 	public var totalPlayed:Int = 0;
 	public var totalNotesHit:Float = 0.0;
 	public var showCombo:Bool = false;
-	public var showComboNum:Bool = true;
-	public var showRating:Bool = true;
+	public var showComboNum:Bool = false;
+	public var showRating:Bool = false;
 
 	private function cachePopUpScore()
 	{

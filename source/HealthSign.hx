@@ -23,6 +23,6 @@ class HealthSign extends FlxSprite
 	 */
 	public function signal(value:Float):Void
 	{
-		animation.curAnim.curFrame = Std.int(value * 3); // should green be starting or full health?
+		animation.curAnim.curFrame = Std.int(value * 5); // should green be starting or full health?
 	}
 }

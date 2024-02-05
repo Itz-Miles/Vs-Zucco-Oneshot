@@ -121,7 +121,7 @@
 	<haxelib name="faxe" if='switch'/>
 	<haxelib name="hxcpp"/>
 	<haxelib name="hscript" />
-	<haxelib name="parallaxlt"/>
+	<!--<haxelib name="parallaxlt"/> later-->
 	<haxelib name="hxcpp-debug-server" if="debug"/>
 	<haxelib name="discord_rpc" if="desktop"/>
 	<!-- _____________________ Icons ____________________ -->

@@ -19,10 +19,7 @@ class CustomFadeTransition extends MusicBeatSubstate
 	var duration:Float = 0.5;
 
 	var transSprite:FlxSprite;
-	var transBlack:FlxSprite;
 	var transGrad:FlxSprite;
-
-	var ownCam:FlxCamera;
 
 	// for compatibility, i will not remove duration
 	public function new(duration:Float, isTransIn:Bool)
@@ -35,21 +32,12 @@ class CustomFadeTransition extends MusicBeatSubstate
 
 	override function create()
 	{
-		if (ownCam == null)
-		{
-			ownCam = new FlxCamera(0, 0, FlxG.width, FlxG.height);
-			ownCam.bgColor.alpha = 0;
-			FlxG.cameras.add(ownCam, false);
-		}
-		else
-			ownCam = nextCamera;
-
-		camera = ownCam;
+		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]]; // if it aint broke, don't fix it
 
 		var doorSound:FlxSound = null;
 
-		var width:Int = ownCam.width;
-		var height:Int = ownCam.height;
+		var width:Int = FlxG.width;
+		var height:Int = FlxG.height;
 
 		if (doorTransition)
 		{
@@ -57,7 +45,7 @@ class CustomFadeTransition extends MusicBeatSubstate
 			if (isTransIn)
 			{
 				transSprite.animation.addByPrefix('door', 'door opening', 24, false);
-				transSprite.offset.y = -82; // random bs number i picked, but its close enuff
+				transSprite.offset.set(0, -82);
 
 				doorSound = FlxG.sound.play(Paths.sound('transOpen'));
 			}
@@ -67,6 +55,7 @@ class CustomFadeTransition extends MusicBeatSubstate
 				doorSound = FlxG.sound.play(Paths.sound('transClose'));
 			}
 			doorSound.persist = true;
+			transSprite.scrollFactor.set();
 			transSprite.animation.play('door');
 			add(transSprite);
 		}
@@ -78,18 +67,18 @@ class CustomFadeTransition extends MusicBeatSubstate
 			transGrad.scrollFactor.set();
 			add(transGrad);
 
-			transBlack = new FlxSprite().makeGraphic(1, height + 400, 0xFF000000);
-			transBlack.scale.x = width;
-			transBlack.updateHitbox();
-			transBlack.scrollFactor.set();
-			add(transBlack);
+			transSprite = new FlxSprite().makeGraphic(1, height + 400, 0xFF000000);
+			transSprite.scale.x = width;
+			transSprite.updateHitbox();
+			transSprite.scrollFactor.set();
+			add(transSprite);
 
 			transGrad.x -= (width - FlxG.width) / 2;
-			transBlack.x = transGrad.x;
+			transSprite.x = transGrad.x;
 
 			if (isTransIn)
 			{
-				transGrad.y = transBlack.y - transBlack.height;
+				transGrad.y = transSprite.y - transSprite.height;
 				FlxTween.tween(transGrad, {y: transGrad.height + 50}, duration, {
 					onComplete: function(twn:FlxTween)
 					{
@@ -101,7 +90,7 @@ class CustomFadeTransition extends MusicBeatSubstate
 			else
 			{
 				transGrad.y = -transGrad.height;
-				transBlack.y = transGrad.y - transBlack.height + 50;
+				transSprite.y = transGrad.y - transSprite.height + 50;
 				FlxTween.tween(transGrad, {y: transGrad.height + 50}, duration, {
 					onComplete: function(twn:FlxTween)
 					{
@@ -137,23 +126,16 @@ class CustomFadeTransition extends MusicBeatSubstate
 		else
 		{
 			if (isTransIn)
-				transBlack.y = transGrad.y + transGrad.height;
+				transSprite.y = transGrad.y + transGrad.height;
 			else
-				transBlack.y = transGrad.y - transBlack.height;
+				transSprite.y = transGrad.y - transSprite.height;
 
 			super.update(elapsed);
 
 			if (isTransIn)
-				transBlack.y = transGrad.y + transGrad.height;
+				transSprite.y = transGrad.y + transGrad.height;
 			else
-				transBlack.y = transGrad.y - transBlack.height;
+				transSprite.y = transGrad.y - transSprite.height;
 		}
-	}
-
-	override function destroy()
-	{
-		FlxG.cameras.remove(ownCam, true);
-
-		super.destroy();
 	}
 }

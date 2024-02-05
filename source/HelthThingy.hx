@@ -17,7 +17,7 @@ class HelthThingy extends FlxSprite
 			{
 				animation.addByIndices('${i}HP', 'down_bar', [i], "", 0, true);
 			}
-			animation.play("100HP", true);
+			animation.play("0HP", true);
 		}
 		else
 		{
@@ -26,7 +26,7 @@ class HelthThingy extends FlxSprite
 			{
 				animation.addByIndices('${i}HP', 'up_bar', [i], "", 0, true);
 			}
-			animation.play('100HP', true);
+			animation.play("0HP", true);
 		}
 	}
 

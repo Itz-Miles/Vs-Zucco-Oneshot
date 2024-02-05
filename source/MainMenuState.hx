@@ -40,6 +40,7 @@ class MainMenuState extends MusicBeatState
 	// var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
 	var lockerBG:FlxSprite;
+	var escMan:FlxSprite;
 
 	override function create()
 	{
@@ -93,6 +94,15 @@ class MainMenuState extends MusicBeatState
 		lockerBG.x = -780;
 		lockerBG.y = -250;
 		// lockerBG.screenCenter();
+
+		var escMan:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('esc'));
+		escMan.setGraphicSize(Std.int(bg.width * 1.175));
+		escMan.updateHitbox();
+		//escMan.screenCenter();
+		escMan.x = -430;
+		escMan.y = 650;
+		escMan.antialiasing = ClientPrefs.globalAntialiasing;
+		add(escMan);
 
 		for (i in 0...optionShit.length)
 		{

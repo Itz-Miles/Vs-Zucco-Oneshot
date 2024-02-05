@@ -58,7 +58,7 @@ import animateatlas.AtlasFrameMaker;
 import Achievements;
 import StageData;
 import FunkinLua;
-import HelthThingy;
+import HealthSign;
 import DialogueBoxPsych;
 import Conductor.Rating;
 #if !flash
@@ -185,15 +185,15 @@ class PlayState extends MusicBeatState
 
 	private var curSong:String = "";
 
-	private var helth:HelthThingy = null;
+	private var healthSign:HealthSign = null;
 
 	public var gfSpeed:Int = 1;
-	public var health:Float = 1;
+	public var health(default, set):Float = 1;
 	public var combo:Int = 0;
 
 	private function set_health(newHP:Float):Float
 	{
-		helth.healthUpdate();
+		healthSign.signal(newHP);
 
 		return health = newHP;
 	}
@@ -538,6 +538,8 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'hallway':
+			trace('a');
 			case 'stage': // Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -1179,8 +1181,8 @@ class PlayState extends MusicBeatState
 			iconP1.visible = false;
 			iconP2.visible = false;
 
-			helth = new HelthThingy(890, (ClientPrefs.downScroll ? 0 : 500));
-			helth.scale.set(1.0, 1.0);
+			healthSign = new HealthSign(890, (ClientPrefs.downScroll ? 0 : 500));
+			healthSign.cameras = [camHUD];
 		}
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
@@ -1203,7 +1205,6 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = timeBarBG.y - 78;
 		}
 
-		helth.cameras = [camHUD];
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -2305,7 +2306,7 @@ class PlayState extends MusicBeatState
 							}
 						});
 						FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
-						add(helth);
+						add(healthSign);
 					case 4:
 				}
 

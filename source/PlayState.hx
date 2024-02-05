@@ -547,10 +547,6 @@ class PlayState extends MusicBeatState
 			front.scale.set(1.2, 1.2);
 			add(front);
 
-			var zucco:FlxSprite = new FlxSprite(-200, 550);
-			zucco.scale.set(1.2, 1.2);
-			add(zucco);
-
 
 			/*
 			not doen witrh these yet gotta go to bed

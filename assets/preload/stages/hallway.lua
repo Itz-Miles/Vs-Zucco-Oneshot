@@ -1,6 +1,11 @@
 function onCreate()
 
-	makeLuaSprite('overlay', 'overlay', -1000, 150);
+	makeAnimatedLuaSprite('zucco', 'zucco', -450, 430)
+	luaSpriteAddAnimationByPrefix('zucco', 'idle', 'zucco', 24, true);
+	scaleObject('zucco', 1.2, 1.2);
+	addLuaSprite('zucco', true);
+
+	makeLuaSprite('overlay', 'overlay', -1500, 50);
 	scaleObject('overlay', 1.2, 1.2);
 	addLuaSprite('overlay', true);
 	

@@ -19,10 +19,10 @@ class HealthSign extends FlxSprite
 
 	/**
 	 * Updates the signal, remapping the value to lights.
-	 * @param value Remaps health (2.0) to frames (6). Negates 1 for frame indexing.
+	 * @param value Remaps health (2.0) to frames (6).
 	 */
 	public function signal(value:Float):Void
 	{
-		animation.curAnim.curFrame = Std.int(value * 3) - 1; // should green be starting or full health?
+		animation.curAnim.curFrame = Std.int(value * 3); // should green be starting or full health?
 	}
 }

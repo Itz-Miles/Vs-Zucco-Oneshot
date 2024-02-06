@@ -95,14 +95,15 @@ class MainMenuState extends MusicBeatState
 		lockerBG.y = -250;
 		// lockerBG.screenCenter();
 
-		var escMan:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('esc'));
+		var escMan:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('escdude'));
 		escMan.setGraphicSize(Std.int(bg.width * 1.175));
+		escMan.scale.set(0.4, 0.4);
+		escMan.x = 80;
+		escMan.y = 530;
+		escMan.alpha = 0.8;
 		escMan.updateHitbox();
 		//escMan.screenCenter();
-		escMan.x = -430;
-		escMan.y = 650;
 		escMan.antialiasing = ClientPrefs.globalAntialiasing;
-		add(escMan);
 
 		for (i in 0...optionShit.length)
 		{
@@ -164,6 +165,7 @@ class MainMenuState extends MusicBeatState
 		#end
 		add(lockerBG);
 		add(menuItems);
+		add(escMan);
 
 		super.create();
 	}

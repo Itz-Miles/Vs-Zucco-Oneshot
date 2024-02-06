@@ -56,6 +56,7 @@ class OptionsState extends MusicBeatState
 	var selectorRight:Alphabet;
 	var cinematic:FlxSprite;
 	var checker:FlxSprite;
+	var escMan:FlxSprite;
 
 	override function create() {
 		#if desktop
@@ -85,6 +86,17 @@ class OptionsState extends MusicBeatState
 		checker.offset.x -= 0;
 		checker.offset.y += 0;
 		checker.velocity.x = 20;
+
+		var escMan:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('escdude'));
+		escMan.setGraphicSize(Std.int(bg.width * 1.175));
+		escMan.scale.set(0.4, 0.4);
+		escMan.x = 80;
+		escMan.y = 530;
+		escMan.alpha = 0.8;
+		escMan.updateHitbox();
+		//escMan.screenCenter();
+		escMan.antialiasing = ClientPrefs.globalAntialiasing;
+		add(escMan);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);

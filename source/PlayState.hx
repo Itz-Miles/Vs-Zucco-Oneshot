@@ -429,7 +429,6 @@ class PlayState extends MusicBeatState
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 
 		FlxG.cameras.setDefaultDrawTarget(camGame, true);
-		CustomFadeTransition.nextCamera = camOther;
 
 		persistentUpdate = true;
 		persistentDraw = true;
@@ -1401,8 +1400,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 		Paths.clearUnusedMemory();
-
-		CustomFadeTransition.nextCamera = camOther;
 	}
 
 	#if (!flash && sys)
@@ -4289,10 +4286,6 @@ class PlayState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('menumusic'));
 
 					cancelMusicFadeTween();
-					if (FlxTransitionableState.skipNextTransIn)
-					{
-						CustomFadeTransition.nextCamera = null;
-					}
 					MusicBeatState.switchState(new MainMenuState());
 
 					// if ()
@@ -4358,10 +4351,6 @@ class PlayState extends MusicBeatState
 				trace('WENT BACK TO FREEPLAY??');
 				WeekData.loadTheFirstEnabledMod();
 				cancelMusicFadeTween();
-				if (FlxTransitionableState.skipNextTransIn)
-				{
-					CustomFadeTransition.nextCamera = null;
-				}
 				MusicBeatState.switchState(new MainMenuState());
 				FlxG.sound.playMusic(Paths.music('menumusic'));
 				changedDifficulty = false;

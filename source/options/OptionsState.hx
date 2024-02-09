@@ -31,7 +31,7 @@ using StringTools;
 class OptionsState extends MusicBeatState
 {
 	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
-	private var grpOptions:FlxTypedGroup<Alphabet>;
+	private var grpOptions:FlxTypedGroup<FlxText>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
 
@@ -52,8 +52,8 @@ class OptionsState extends MusicBeatState
 		}
 	}
 
-	var selectorLeft:Alphabet;
-	var selectorRight:Alphabet;
+	var selectorLeft:FlxText;
+	var selectorRight:FlxText;
 	var cinematic:FlxSprite;
 	var checker:FlxSprite;
 	var escMan:FlxSprite;
@@ -98,7 +98,7 @@ class OptionsState extends MusicBeatState
 		escMan.antialiasing = ClientPrefs.globalAntialiasing;
 		add(escMan);
 
-		grpOptions = new FlxText();
+		grpOptions = new FlxTypedGroup<FlxText>;
 		add(grpOptions);
 
 		for (i in 0...options.length)
@@ -110,9 +110,9 @@ class OptionsState extends MusicBeatState
 			grpOptions.add(optionText);
 		}
 
-		selectorLeft = new Alphabet(0, 0, '>', true);
+		selectorLeft = new FlxText(0, 0, '>', true);
 		add(selectorLeft);
-		selectorRight = new Alphabet(0, 0, '<', true);
+		selectorRight = new FlxText(0, 0, '<', true);
 		add(selectorRight);
 
 		changeSelection();

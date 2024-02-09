@@ -98,12 +98,13 @@ class OptionsState extends MusicBeatState
 		escMan.antialiasing = ClientPrefs.globalAntialiasing;
 		add(escMan);
 
-		grpOptions = new FlxTypedGroup<Alphabet>();
+		grpOptions = new FlxText();
 		add(grpOptions);
 
 		for (i in 0...options.length)
 		{
-			var optionText:Alphabet = new Alphabet(0, 0, options[i], true);
+			var optionText:FlxText = new FlxText(0, 0, options[i], true);
+			optionText.setFormat(Paths.font("ATTFShinGoProUltra.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			optionText.screenCenter();
 			optionText.y += (100 * (i - (options.length / 2))) + 50;
 			grpOptions.add(optionText);

@@ -11,7 +11,6 @@ import flixel.util.FlxGradient;
 class CustomFadeTransition extends MusicBeatSubstate
 {
 	public static var finishCallback:Void->Void;
-	public static var nextCamera:FlxCamera;
 
 	public static var doorTransition:Bool = false;
 

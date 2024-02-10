@@ -31,7 +31,7 @@ using StringTools;
 class OptionsState extends MusicBeatState
 {
 	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
-	private var grpOptions:FlxTypedGroup<FlxText>;
+	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
 
@@ -52,8 +52,8 @@ class OptionsState extends MusicBeatState
 		}
 	}
 
-	var selectorLeft:FlxText;
-	var selectorRight:FlxText;
+	var selectorLeft:Alphabet;
+	var selectorRight:Alphabet;
 	var cinematic:FlxSprite;
 	var checker:FlxSprite;
 	var escMan:FlxSprite;
@@ -98,21 +98,20 @@ class OptionsState extends MusicBeatState
 		escMan.antialiasing = ClientPrefs.globalAntialiasing;
 		add(escMan);
 
-		grpOptions = new FlxTypedGroup<FlxText>;
+		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
 		for (i in 0...options.length)
 		{
-			var optionText:FlxText = new FlxText(0, 0, options[i], true);
-			optionText.setFormat(Paths.font("ATTFShinGoProUltra.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			var optionText:Alphabet = new Alphabet(0, 0, options[i], true);
 			optionText.screenCenter();
 			optionText.y += (100 * (i - (options.length / 2))) + 50;
 			grpOptions.add(optionText);
 		}
 
-		selectorLeft = new FlxText(0, 0, '>', true);
+		selectorLeft = new Alphabet(0, 0, '>', true);
 		add(selectorLeft);
-		selectorRight = new FlxText(0, 0, '<', true);
+		selectorRight = new Alphabet(0, 0, '<', true);
 		add(selectorRight);
 
 		changeSelection();

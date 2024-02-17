@@ -40,7 +40,6 @@ class MainMenuState extends MusicBeatState
 	// var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
 	var lockerBG:FlxSprite;
-	var escMan:FlxSprite;
 
 	override function create()
 	{
@@ -81,29 +80,8 @@ class MainMenuState extends MusicBeatState
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 
-		var scale:Float = 1;
-		/*if(optionShit.length > 6) {
-			scale = 6 / optionShit.length;
-		}*/
-
-		lockerBG = new FlxSprite(0, 0);
-		lockerBG.frames = Paths.getSparrowAtlas('the_wall');
-		lockerBG.animation.addByPrefix('anim', "THE BG", 12);
-		lockerBG.animation.play('anim');
-		lockerBG.updateHitbox();
-		lockerBG.x = -780;
-		lockerBG.y = -250;
-		// lockerBG.screenCenter();
-
-		var escMan:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('escdude'));
-		escMan.setGraphicSize(Std.int(bg.width * 1.175));
-		escMan.scale.set(0.4, 0.4);
-		escMan.x = 80;
-		escMan.y = 530;
-		escMan.alpha = 0.8;
-		escMan.updateHitbox();
-		//escMan.screenCenter();
-		escMan.antialiasing = ClientPrefs.globalAntialiasing;
+		lockerBG = new FlxSprite(0, 0, Paths.image("wall"));
+		add(lockerBG);
 
 		for (i in 0...optionShit.length)
 		{
@@ -133,8 +111,7 @@ class MainMenuState extends MusicBeatState
 					spr.y = 450;
 			}
 		});
-
-		// FlxG.camera.follow(camFollowPos, null, 1);
+		add(menuItems);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
@@ -144,8 +121,6 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat(Paths.font('ATTFShinGoProDeBold.ttf'), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-
-		// NG.core.calls.event.logEvent('swag').send();
 
 		changeItem();
 
@@ -163,9 +138,6 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 		#end
-		add(lockerBG);
-		add(menuItems);
-		add(escMan);
 
 		super.create();
 	}
@@ -283,7 +255,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			//spr.screenCenter(X);
+			// spr.screenCenter(X);
 		});
 	}
 

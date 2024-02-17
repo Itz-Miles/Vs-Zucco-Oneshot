@@ -35,11 +35,9 @@ class MainMenuState extends MusicBeatState
 
 	var optionShit:Array<String> = ['story_mode', 'options'];
 
-	// var magenta:FlxSprite;
-	// var camFollow:FlxObject;
-	// var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
 	var lockerBG:FlxSprite;
+	var light:FlxSprite;
 
 	override function create()
 	{
@@ -68,19 +66,12 @@ class MainMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.set(0, yScroll);
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
-		bg.updateHitbox();
-		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
-		add(bg);
-
 		// magenta.scrollFactor.set();
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 
 		lockerBG = new FlxSprite(0, 0, Paths.image("wall"));
+		lockerBG.antialiasing = ClientPrefs.globalAntialiasing;
 		add(lockerBG);
 
 		for (i in 0...optionShit.length)
@@ -103,8 +94,8 @@ class MainMenuState extends MusicBeatState
 			switch (spr.ID)
 			{
 				case 0:
-					spr.x = 200;
-					spr.y = 250;
+					spr.x = 170;
+					spr.y = 150;
 
 				case 1:
 					spr.x = 120;
@@ -112,6 +103,10 @@ class MainMenuState extends MusicBeatState
 			}
 		});
 		add(menuItems);
+
+		light = new FlxSprite(0, 0, Paths.image('light'));
+		light.blend = SCREEN;
+		add(light);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
@@ -162,9 +157,6 @@ class MainMenuState extends MusicBeatState
 			if (FreeplayState.vocals != null)
 				FreeplayState.vocals.volume += 0.5 * elapsed;
 		}
-
-		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
-		// camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
 		if (!selectedSomethin)
 		{

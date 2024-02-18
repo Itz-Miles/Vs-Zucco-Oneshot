@@ -105,7 +105,7 @@ class MainMenuState extends MusicBeatState
 		add(menuItems);
 
 		light = new FlxSprite(0, 0, Paths.image('light'));
-		light.blend = SCREEN;
+		light.blend = ADD;
 		add(light);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
@@ -140,8 +140,8 @@ class MainMenuState extends MusicBeatState
 	private function flickerLights():Void
 	{
 		// hmm yes recursion. very lousy but will serve its purpose.
-		FlxTween.tween(light, {alpha: Math.random()}, 1.0, {
-			ease: FlxEase.bounceInOut, startDelay: 0.5,
+		FlxTween.tween(light, {alpha: Std.random(2) - 0.4}, Math.random(), {
+			ease: FlxEase.bounceInOut, startDelay: 0.7,
 			onComplete: function(twn:FlxTween)
 			{
 				flickerLights();

@@ -133,8 +133,20 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 		#end
-
+		flickerLights();
 		super.create();
+	}
+
+	private function flickerLights():Void
+	{
+		// hmm yes recursion. very lousy but will serve its purpose.
+		FlxTween.tween(light, {alpha: Math.random()}, 1.0, {
+			ease: FlxEase.bounceInOut, startDelay: 0.5,
+			onComplete: function(twn:FlxTween)
+			{
+				flickerLights();
+			}
+		});
 	}
 
 	#if ACHIEVEMENTS_ALLOWED

@@ -542,7 +542,7 @@ class PlayState extends MusicBeatState
 			back.scale.set(1.2, 1.2);
 			add(back);
 
-			var front:FlxSprite = new FlxSprite(-1000, 150, Paths.image("front"));
+			var front:FlxSprite = new FlxSprite(-963, 240, Paths.image("front"));
 			front.scale.set(1.2, 1.2);
 			add(front);
 
@@ -557,6 +557,7 @@ class PlayState extends MusicBeatState
 			makeLuaSprite('overlay', 'overlay', -1000, 150);
 			scaleObject('overlay', 1.2, 1.2);
 			addLuaSprite('overlay', true);
+			2.01, 1.68
 			*/
 
 			case 'stage': // Week 1

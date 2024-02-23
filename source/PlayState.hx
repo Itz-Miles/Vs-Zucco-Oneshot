@@ -538,27 +538,26 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'hallway':
-			var back:FlxSprite = new FlxSprite(-1000, 150, Paths.image("back"));
-			back.scale.set(1.2, 1.2);
-			add(back);
+				var back:FlxSprite = new FlxSprite(-1000, 150, Paths.image("back"));
+				back.scale.set(1.2, 1.2);
+				add(back);
 
-			var front:FlxSprite = new FlxSprite(-963, 240, Paths.image("front"));
-			front.scale.set(1.2, 1.2);
-			add(front);
-
+				var front:FlxSprite = new FlxSprite(-963, 240, Paths.image("front"));
+				front.scale.set(1.2, 1.2);
+				add(front);
 
 			/*
-			not doen witrh these yet gotta go to bed
-			makeAnimatedLuaSprite('zucco', 'zucco', -200, 550)
-			luaSpriteAddAnimationByPrefix('zucco', 'idle', 'zucco', 24, true);
-			scaleObject('zucco', 1.2, 1.2);
-			addLuaSprite('zucco', true);
-		
-			makeLuaSprite('overlay', 'overlay', -1000, 150);
-			scaleObject('overlay', 1.2, 1.2);
-			addLuaSprite('overlay', true);
-			2.01, 1.68
-			*/
+				not doen witrh these yet gotta go to bed
+				makeAnimatedLuaSprite('zucco', 'zucco', -200, 550)
+				luaSpriteAddAnimationByPrefix('zucco', 'idle', 'zucco', 24, true);
+				scaleObject('zucco', 1.2, 1.2);
+				addLuaSprite('zucco', true);
+
+				makeLuaSprite('overlay', 'overlay', -1000, 150);
+				scaleObject('overlay', 1.2, 1.2);
+				addLuaSprite('overlay', true);
+				2.01, 1.68
+			 */
 
 			case 'stage': // Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
@@ -4176,6 +4175,11 @@ class PlayState extends MusicBeatState
 	public function finishSong(?ignoreNoteOffset:Bool = false):Void
 	{
 		var finishCallback:Void->Void = endSong; // In case you want to change it in a specific song.
+		if (SONG.song.toLowerCase() == "5chool-bre4k")
+		{
+			endingSong = true;
+			finishCallback = () -> startVideo("cutscene_2");
+		}
 
 		updateTime = false;
 		FlxG.sound.music.volume = 0;

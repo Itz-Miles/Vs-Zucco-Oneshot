@@ -203,10 +203,7 @@ class MainMenuState extends MusicBeatState
 						}
 						else
 						{
-							spr.x = 180;
-							spr.y = 420;
 							spr.animation.play('click', true);
-							spr.updateHitbox();
 							new FlxTimer().start(1.5, function(tmr:FlxTimer)
 							{
 								var daChoice:String = optionShit[curSelected];

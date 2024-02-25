@@ -33,7 +33,7 @@ class MainMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 
-	var optionShit:Array<String> = ['story_mode', 'options'];
+	var optionShit:Array<String> = ['story_mode', 'credits', 'options'];
 
 	var debugKeys:Array<FlxKey>;
 	var lockerBG:FlxSprite;
@@ -76,32 +76,18 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		{
-			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(150);
-			menuItem.scale.set(0.6, 0.6);
+			var menuItem:FlxSprite = new FlxSprite(200 + (i * 20), 140 + (i * 180));
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24, true);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24, true);
 			menuItem.animation.addByPrefix('click', optionShit[i] + " click", 24, false);
 			menuItem.animation.play('idle');
+			menuItem.scale.set(0.81, 0.81);
+			menuItem.origin.set(0, 0);
 			menuItem.ID = i;
-			// menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 		}
 
-		menuItems.forEach(function(spr:FlxSprite)
-		{
-			switch (spr.ID)
-			{
-				case 0:
-					spr.x = 170;
-					spr.y = 150;
-
-				case 1:
-					spr.x = 120;
-					spr.y = 450;
-			}
-		});
 		add(menuItems);
 
 		light = new FlxSprite(0, 0, Paths.image('light'));
@@ -300,20 +286,15 @@ class MainMenuState extends MusicBeatState
 		menuItems.forEach(function(spr:FlxSprite)
 		{
 			spr.animation.play('idle');
-			spr.updateHitbox();
 
 			if (spr.ID == curSelected)
 			{
-				spr.x = 200;
 				spr.animation.play('selected');
-				spr.updateHitbox();
-				CustomFadeTransition.doorTransition = true;
 				var add:Float = 0;
 				if (menuItems.length > 4)
 				{
 					add = menuItems.length * 8;
 				}
-				spr.centerOffsets();
 			}
 		});
 	}

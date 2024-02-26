@@ -4292,7 +4292,6 @@ class PlayState extends MusicBeatState
 					else
 					{
 						MusicBeatState.switchState(new MainMenuState());
-
 					}
 					// if ()
 					if (!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false))

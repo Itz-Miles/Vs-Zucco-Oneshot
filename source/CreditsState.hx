@@ -29,7 +29,6 @@ class CreditsState extends MusicBeatState
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private var iconArray:Array<AttachedSprite> = [];
 	private var creditsStuff:Array<Array<String>> = [];
-	
 	var descText:FlxText;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
@@ -78,15 +77,13 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-			['Psych Engine Team'],
+			['Psych Engine'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
 			['shubs',				'shubs',			'Additional Programmer of Psych Engine',						'https://twitter.com/yoshubs',			'5E99DF'],
 			[''],
-			['Former Engine Members'],
+			['Contributors'],
 			['bb-panzu',			'bb',				'Ex-Programmer of Psych Engine',								'https://twitter.com/bbsub3',			'3E813A'],
-			[''],
-			['Engine Contributors'],
 			['iFlicky',				'flicky',			'Composer of Psync and Tea Time\nMade the Dialogue Sounds',		'https://twitter.com/flicky_i',			'9E29CF'],
 			['SqirraRNG',			'sqirra',			'Crash Handler and Base code for\nChart Editor\'s Waveform',	'https://twitter.com/gedehari',			'E1843A'],
 			['EliteMasterEric',		'mastereric',		'Runtime Shaders support',										'https://twitter.com/EliteMasterEric',	'FFBD40'],
@@ -110,7 +107,7 @@ class CreditsState extends MusicBeatState
 		for (i in 0...creditsStuff.length)
 		{
 			var isSelectable:Bool = !unselectableCheck(i);
-			var optionText:Alphabet = new Alphabet(FlxG.width / 2, 300, creditsStuff[i][0], !isSelectable);
+			var optionText:Alphabet = new Alphabet(850, 300, creditsStuff[i][0], !isSelectable);
 			optionText.isMenuItem = true;
 			optionText.targetY = i;
 			optionText.changeX = false;
@@ -124,7 +121,7 @@ class CreditsState extends MusicBeatState
 				}
 
 				var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[i][1]);
-				icon.xAdd = optionText.width + 10;
+				icon.xAdd = - icon.width;
 				icon.sprTracker = optionText;
 	
 				// using a FlxGroup is too much fuss!
@@ -221,12 +218,12 @@ class CreditsState extends MusicBeatState
 				if(item.targetY == 0)
 				{
 					var lastX:Float = item.x;
-					item.screenCenter(X);
+					item.x = 700;
 					item.x = FlxMath.lerp(lastX, item.x - 70, lerpVal);
 				}
 				else
 				{
-					item.x = FlxMath.lerp(item.x, 200 + -40 * Math.abs(item.targetY), lerpVal);
+					item.x = FlxMath.lerp(item.x, 750, lerpVal);
 				}
 			}
 		}

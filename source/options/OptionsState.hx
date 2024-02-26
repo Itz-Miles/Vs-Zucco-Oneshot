@@ -31,7 +31,7 @@ using StringTools;
 class OptionsState extends MusicBeatState
 {
 	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
-	private var grpOptions:FlxTypedGroup<Alphabet>;
+	var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
 
@@ -65,7 +65,6 @@ class OptionsState extends MusicBeatState
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('gradientbg'));
 		bg.updateHitbox();
-
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
@@ -86,17 +85,6 @@ class OptionsState extends MusicBeatState
 		checker.offset.x -= 0;
 		checker.offset.y += 0;
 		checker.velocity.x = 20;
-
-		var escMan:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('escdude'));
-		escMan.setGraphicSize(Std.int(bg.width * 1.175));
-		escMan.scale.set(0.4, 0.4);
-		escMan.x = 80;
-		escMan.y = 530;
-		escMan.alpha = 0.8;
-		escMan.updateHitbox();
-		//escMan.screenCenter();
-		escMan.antialiasing = ClientPrefs.globalAntialiasing;
-		add(escMan);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
@@ -123,6 +111,7 @@ class OptionsState extends MusicBeatState
 	override function closeSubState() {
 		super.closeSubState();
 		ClientPrefs.saveSettings();
+		grpOptions.visible = selectorLeft.visible = selectorRight.visible = true;
 	}
 
 	override function update(elapsed:Float) {
@@ -141,6 +130,7 @@ class OptionsState extends MusicBeatState
 		}
 
 		if (controls.ACCEPT) {
+			grpOptions.visible = selectorLeft.visible = selectorRight.visible = false;
 			openSelectedSubstate(options[curSelected]);
 		}
 	}

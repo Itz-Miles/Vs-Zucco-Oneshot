@@ -75,8 +75,6 @@ class TitleState extends MusicBeatState
 
 	var mustUpdate:Bool = false;
 
-	var titleJSON:TitleData;
-
 	public static var updateVersion:String = '';
 
 	override public function create():Void
@@ -137,9 +135,6 @@ class TitleState extends MusicBeatState
 		#end
 
 		Highscore.load();
-
-		// IGNORE THIS!!!
-		titleJSON = Json.parse(Paths.getTextFromFile('images/gfDanceTitle.json'));
 
 		if (!initialized)
 		{
@@ -213,24 +208,7 @@ class TitleState extends MusicBeatState
 			}
 		}
 
-		Conductor.changeBPM(titleJSON.bpm);
-		persistentUpdate = true;
-
-		var bg:FlxSprite = new FlxSprite();
-
-		if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.length > 0 && titleJSON.backgroundSprite != "none")
-		{
-			bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
-		}
-		else
-		{
-			bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		}
-
-		// bg.antialiasing = ClientPrefs.globalAntialiasing;
-		// bg.setGraphicSize(Std.int(bg.width * 0.6));
-		// bg.updateHitbox();
-		add(bg);
+		Conductor.changeBPM(102);
 
 		visualizer = new FlxSprite(0, 0);
 		visualizer.frames = Paths.getSparrowAtlas('visualiser');
@@ -251,7 +229,7 @@ class TitleState extends MusicBeatState
 		picoTitle.x = 95;
 		picoTitle.y = 0;
 
-		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
+		logoBl = new FlxSprite(-150, -100);
 		logoBl.frames = Paths.getSparrowAtlas('logo_bumpin');
 		logoBl.animation.addByPrefix('bump', 'logo bumping', 24, false);
 		logoBl.animation.play('bump');
@@ -262,7 +240,7 @@ class TitleState extends MusicBeatState
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 		swagShader = new ColorSwap();
-		gfDance = new FlxSprite(titleJSON.gfx, titleJSON.gfy);
+		gfDance = new FlxSprite(512, 40);
 
 		var easterEgg:String = FlxG.save.data.psychDevsEasterEgg;
 		if (easterEgg == null)
@@ -285,7 +263,7 @@ class TitleState extends MusicBeatState
 			logoBl.shader = swagShader.shader;
 		}
 
-		titleText = new FlxSprite(titleJSON.startx, titleJSON.starty);
+		titleText = new FlxSprite(100, 576);
 		#if (desktop && MODS_ALLOWED)
 		var path = "mods/" + Paths.currentModDirectory + "/images/titleEnter.png";
 		// trace(path, FileSystem.exists(path));

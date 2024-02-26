@@ -4175,12 +4175,6 @@ class PlayState extends MusicBeatState
 	public function finishSong(?ignoreNoteOffset:Bool = false):Void
 	{
 		var finishCallback:Void->Void = endSong; // In case you want to change it in a specific song.
-		if (SONG.song.toLowerCase() == "5chool-bre4k")
-		{
-			endingSong = true;
-			finishCallback = () -> startVideo("cutscene_2");
-		}
-
 		updateTime = false;
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
@@ -4291,8 +4285,15 @@ class PlayState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('menumusic'));
 
 					cancelMusicFadeTween();
-					MusicBeatState.switchState(new MainMenuState());
+					if (SONG.song.toLowerCase() == "5chool-bre4k")
+					{
+						MusicBeatState.switchState(new CreditsState());
+					}
+					else
+					{
+						MusicBeatState.switchState(new MainMenuState());
 
+					}
 					// if ()
 					if (!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false))
 					{

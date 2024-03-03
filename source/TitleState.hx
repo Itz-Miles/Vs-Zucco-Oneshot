@@ -230,13 +230,13 @@ class TitleState extends MusicBeatState
 		picoTitle.y = 0;
 
 		logoBl = new FlxSprite(-150, -100);
-		logoBl.frames = Paths.getSparrowAtlas('logo_bumpin');
+		logoBl.frames = Paths.getSparrowAtlas('logoBumping');
 		logoBl.animation.addByPrefix('bump', 'logo bumping', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
-		logoBl.scale.set(0.8, 0.8);
-		logoBl.x = -70;
-		logoBl.y = -70;
+		logoBl.scale.set(1.1, 1.1);
+		logoBl.x = 20;
+		logoBl.y = 10;
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 		swagShader = new ColorSwap();

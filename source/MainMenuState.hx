@@ -82,8 +82,6 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24, true);
 			menuItem.animation.addByPrefix('click', optionShit[i] + " click", 24, false);
 			menuItem.animation.play('idle');
-			menuItem.scale.set(0.81, 0.81);
-			menuItem.origin.set(0, 0);
 			menuItem.ID = i;
 			menuItems.add(menuItem);
 		}
@@ -180,71 +178,51 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
-				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
-				}
-				else
-				{
-					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
-
-					menuItems.forEach(function(spr:FlxSprite)
-					{
-						if (curSelected != spr.ID)
-						{
-							FlxTween.tween(spr, {alpha: 0}, 0.4, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									spr.kill();
-								}
-							});
-						}
-						else
-						{
-							spr.animation.play('click', true);
-							new FlxTimer().start(1.5, function(tmr:FlxTimer)
-							{
-								var daChoice:String = optionShit[curSelected];
-
-								switch (daChoice)
-								{
-									case 'story_mode':
-										selectSong();
-									case 'freeplay':
-										MusicBeatState.switchState(new FreeplayState());
-									#if MODS_ALLOWED
-									case 'mods':
-										MusicBeatState.switchState(new ModsMenuState());
-									#end
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
-									case 'credits':
-										MusicBeatState.switchState(new CreditsState());
-									case 'options':
-										LoadingState.loadAndSwitchState(new options.OptionsState());
-								}
-							});
-						}
-					});
-				}
-			}
-			#if desktop
-			else if (FlxG.keys.anyJustPressed(debugKeys))
-			{
 				selectedSomethin = true;
-				MusicBeatState.switchState(new MasterEditorMenu());
+				FlxG.sound.play(Paths.sound('confirmMenu'));
+
+				menuItems.forEach(function(spr:FlxSprite)
+				{
+					if (curSelected != spr.ID)
+					{
+						FlxTween.tween(spr, {alpha: 0}, 0.4, {
+							ease: FlxEase.quadOut,
+							onComplete: function(twn:FlxTween)
+							{
+								spr.kill();
+							}
+						});
+					}
+					else
+					{
+						spr.animation.play('click', true);
+					}
+				});
+				new FlxTimer().start(1.5, function(tmr:FlxTimer)
+				{
+					var daChoice:String = optionShit[curSelected];
+
+					switch (daChoice)
+					{
+						case 'story_mode':
+							selectSong();
+						case 'credits':
+							MusicBeatState.switchState(new CreditsState());
+						case 'options':
+							LoadingState.loadAndSwitchState(new options.OptionsState());
+					}
+				});
 			}
-			#end
 		}
+		#if desktop
+		else if (FlxG.keys.anyJustPressed(debugKeys))
+		{
+			selectedSomethin = true;
+			MusicBeatState.switchState(new MasterEditorMenu());
+		}
+		#end
 
 		super.update(elapsed);
-
-		menuItems.forEach(function(spr:FlxSprite)
-		{
-			// spr.screenCenter(X);
-		});
 	}
 
 	function selectSong()

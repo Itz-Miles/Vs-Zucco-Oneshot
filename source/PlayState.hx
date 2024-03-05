@@ -5006,6 +5006,20 @@ class PlayState extends MusicBeatState
 		}
 		else if (!note.noAnimation)
 		{
+			if (!SONG.notes[curSection].mustHitSection && !isDead)
+				{
+					switch (note.noteData)
+					{
+						case 0:
+							camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0] - 40, dad.getMidpoint().y - 100 + dad.cameraPosition[1]);
+						case 1:
+							camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0], dad.getMidpoint().y - 100 + dad.cameraPosition[1] + 40);
+						case 2:
+							camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0], dad.getMidpoint().y - 100 + dad.cameraPosition[1] - 40);
+						case 3:
+							camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0] + 40, dad.getMidpoint().y - 100 + dad.cameraPosition[1]);
+					}
+				}
 			var altAnim:String = note.animSuffix;
 
 			if (SONG.notes[curSection] != null)
@@ -5110,6 +5124,40 @@ class PlayState extends MusicBeatState
 
 			if (!note.noAnimation)
 			{
+				if (SONG.notes[curSection].mustHitSection && !isDead)
+					{
+						switch (note.noteData)
+						{
+							case 0:
+								camFollow.set(boyfriend.getMidpoint().x
+									+ boyfriend.cameraPosition[0]
+									- 140,
+									boyfriend.getMidpoint().y
+									+ boyfriend.cameraPosition[1]
+									- 100);
+							case 1:
+								camFollow.set(boyfriend.getMidpoint().x
+									+ boyfriend.cameraPosition[0]
+									- 100,
+									boyfriend.getMidpoint().y
+									+ boyfriend.cameraPosition[1]
+									- 60);
+							case 2:
+								camFollow.set(boyfriend.getMidpoint().x
+									+ boyfriend.cameraPosition[0]
+									- 100,
+									boyfriend.getMidpoint().y
+									+ boyfriend.cameraPosition[1]
+									- 140);
+							case 3:
+								camFollow.set(boyfriend.getMidpoint().x
+									+ boyfriend.cameraPosition[0]
+									- 60,
+									boyfriend.getMidpoint().y
+									+ boyfriend.cameraPosition[1]
+									- 100);
+						}
+					}
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
 
 				if (note.gfNote)

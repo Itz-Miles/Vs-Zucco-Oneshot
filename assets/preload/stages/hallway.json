@@ -2,8 +2,7 @@
 	"directory": "hallway",
 	"defaultZoom": 0.7,
 	"isPixelStage": false,
-
-	"boyfriend": [950, 240],
-	"girlfriend": [250, 290],
-	"opponent": [-290, 240]
+	"boyfriend": [850, 240],
+	"girlfriend": [150, 290],
+	"opponent": [-440, 240]
 }

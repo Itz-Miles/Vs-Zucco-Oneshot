@@ -539,25 +539,22 @@ class PlayState extends MusicBeatState
 		{
 			case 'hallway':
 				var back:FlxSprite = new FlxSprite(-1000, 150, Paths.image("back"));
-				back.scale.set(1.2, 1.2);
 				add(back);
 
 				var front:FlxSprite = new FlxSprite(-963, 240, Paths.image("front"));
-				front.scale.set(1.2, 1.2);
 				add(front);
 
-			/*
-				not doen witrh these yet gotta go to bed
-				makeAnimatedLuaSprite('zucco', 'zucco', -200, 550)
-				luaSpriteAddAnimationByPrefix('zucco', 'idle', 'zucco', 24, true);
-				scaleObject('zucco', 1.2, 1.2);
-				addLuaSprite('zucco', true);
+				var zucco:FlxSprite = new FlxSprite(-500, 430);
+				zucco.frames = Paths.getSparrowAtlas("zucco", null);
+				zucco.animation.addByPrefix("idle", "zucco", 24, true);
+				zucco.animation.play("idle");
+				add(zucco);
 
-				makeLuaSprite('overlay', 'overlay', -1000, 150);
-				scaleObject('overlay', 1.2, 1.2);
-				addLuaSprite('overlay', true);
-				2.01, 1.68
-			 */
+				var light:FlxSprite = new FlxSprite(-1000, 150, Paths.image("light"));
+				light.scale.set(2.01, 1.68);
+				light.origin.set(0, 0);
+				light.blend = ADD;
+				add(light);
 
 			case 'stage': // Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
@@ -2233,7 +2230,7 @@ class PlayState extends MusicBeatState
 				}
 
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
-				introAssets.set('default', ['3', '2', '1','go']);
+				introAssets.set('default', ['3', '2', '1', 'go']);
 				introAssets.set('pixel', ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel']);
 
 				var introAlts:Array<String> = introAssets.get('default');
@@ -2302,7 +2299,7 @@ class PlayState extends MusicBeatState
 						});
 						FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
 					case 3:
-						countdown1= new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
+						countdown1 = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 						countdown1.scale.set(1.0, 1.0);
 						countdown1.cameras = [camHUD];
 						countdown1.scrollFactor.set();
@@ -5007,19 +5004,19 @@ class PlayState extends MusicBeatState
 		else if (!note.noAnimation)
 		{
 			if (!SONG.notes[curSection].mustHitSection && !isDead)
+			{
+				switch (note.noteData)
 				{
-					switch (note.noteData)
-					{
-						case 0:
-							camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0] - 40, dad.getMidpoint().y - 100 + dad.cameraPosition[1]);
-						case 1:
-							camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0], dad.getMidpoint().y - 100 + dad.cameraPosition[1] + 40);
-						case 2:
-							camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0], dad.getMidpoint().y - 100 + dad.cameraPosition[1] - 40);
-						case 3:
-							camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0] + 40, dad.getMidpoint().y - 100 + dad.cameraPosition[1]);
-					}
+					case 0:
+						camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0] - 40, dad.getMidpoint().y - 100 + dad.cameraPosition[1]);
+					case 1:
+						camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0], dad.getMidpoint().y - 100 + dad.cameraPosition[1] + 40);
+					case 2:
+						camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0], dad.getMidpoint().y - 100 + dad.cameraPosition[1] - 40);
+					case 3:
+						camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0] + 40, dad.getMidpoint().y - 100 + dad.cameraPosition[1]);
 				}
+			}
 			var altAnim:String = note.animSuffix;
 
 			if (SONG.notes[curSection] != null)
@@ -5125,39 +5122,39 @@ class PlayState extends MusicBeatState
 			if (!note.noAnimation)
 			{
 				if (SONG.notes[curSection].mustHitSection && !isDead)
+				{
+					switch (note.noteData)
 					{
-						switch (note.noteData)
-						{
-							case 0:
-								camFollow.set(boyfriend.getMidpoint().x
-									+ boyfriend.cameraPosition[0]
-									- 140,
-									boyfriend.getMidpoint().y
-									+ boyfriend.cameraPosition[1]
-									- 100);
-							case 1:
-								camFollow.set(boyfriend.getMidpoint().x
-									+ boyfriend.cameraPosition[0]
-									- 100,
-									boyfriend.getMidpoint().y
-									+ boyfriend.cameraPosition[1]
-									- 60);
-							case 2:
-								camFollow.set(boyfriend.getMidpoint().x
-									+ boyfriend.cameraPosition[0]
-									- 100,
-									boyfriend.getMidpoint().y
-									+ boyfriend.cameraPosition[1]
-									- 140);
-							case 3:
-								camFollow.set(boyfriend.getMidpoint().x
-									+ boyfriend.cameraPosition[0]
-									- 60,
-									boyfriend.getMidpoint().y
-									+ boyfriend.cameraPosition[1]
-									- 100);
-						}
+						case 0:
+							camFollow.set(boyfriend.getMidpoint().x
+								+ boyfriend.cameraPosition[0]
+								- 140,
+								boyfriend.getMidpoint().y
+								+ boyfriend.cameraPosition[1]
+								- 100);
+						case 1:
+							camFollow.set(boyfriend.getMidpoint().x
+								+ boyfriend.cameraPosition[0]
+								- 100,
+								boyfriend.getMidpoint().y
+								+ boyfriend.cameraPosition[1]
+								- 60);
+						case 2:
+							camFollow.set(boyfriend.getMidpoint().x
+								+ boyfriend.cameraPosition[0]
+								- 100,
+								boyfriend.getMidpoint().y
+								+ boyfriend.cameraPosition[1]
+								- 140);
+						case 3:
+							camFollow.set(boyfriend.getMidpoint().x
+								+ boyfriend.cameraPosition[0]
+								- 60,
+								boyfriend.getMidpoint().y
+								+ boyfriend.cameraPosition[1]
+								- 100);
 					}
+				}
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
 
 				if (note.gfNote)

@@ -57,7 +57,6 @@ import flixel.animation.FlxAnimationController;
 import animateatlas.AtlasFrameMaker;
 import Achievements;
 import StageData;
-import FunkinLua;
 import HealthSign;
 import DialogueBoxPsych;
 import Conductor.Rating;
@@ -107,24 +106,10 @@ class PlayState extends MusicBeatState
 	public var boyfriendMap:Map<String, Boyfriend> = new Map();
 	public var dadMap:Map<String, Character> = new Map();
 	public var gfMap:Map<String, Character> = new Map();
-	public var variables:Map<String, Dynamic> = new Map();
-	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
-	public var modchartSprites:Map<String, ModchartSprite> = new Map<String, ModchartSprite>();
-	public var modchartTimers:Map<String, FlxTimer> = new Map<String, FlxTimer>();
-	public var modchartSounds:Map<String, FlxSound> = new Map<String, FlxSound>();
-	public var modchartTexts:Map<String, ModchartText> = new Map<String, ModchartText>();
-	public var modchartSaves:Map<String, FlxSave> = new Map<String, FlxSave>();
 	#else
 	public var boyfriendMap:Map<String, Boyfriend> = new Map<String, Boyfriend>();
 	public var dadMap:Map<String, Character> = new Map<String, Character>();
 	public var gfMap:Map<String, Character> = new Map<String, Character>();
-	public var variables:Map<String, Dynamic> = new Map<String, Dynamic>();
-	public var modchartTweens:Map<String, FlxTween> = new Map();
-	public var modchartSprites:Map<String, ModchartSprite> = new Map();
-	public var modchartTimers:Map<String, FlxTimer> = new Map();
-	public var modchartSounds:Map<String, FlxSound> = new Map();
-	public var modchartTexts:Map<String, ModchartText> = new Map();
-	public var modchartSaves:Map<String, FlxSave> = new Map();
 	#end
 
 	public var BF_X:Float = 770;
@@ -333,10 +318,6 @@ class PlayState extends MusicBeatState
 
 	// Lua shit
 	public static var instance:PlayState;
-
-	public var luaArray:Array<FunkinLua> = [];
-
-	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
 
 	public var introSoundsSuffix:String = '';
 
@@ -1965,9 +1946,7 @@ class PlayState extends MusicBeatState
 		}
 
 		inCutscene = false;
-		var ret:Dynamic = callOnLuas('onStartCountdown', [], false);
-		if (ret != FunkinLua.Function_Stop)
-		{
+
 			if (skipCountdown || startOnTime > 0)
 				skipArrowStartTween = true;
 
@@ -2167,7 +2146,7 @@ class PlayState extends MusicBeatState
 				swagCounter += 1;
 				// generateSong('fresh');
 			}, 5);
-		}
+		
 	}
 
 	public function addBehindGF(obj:FlxObject)
@@ -3027,11 +3006,9 @@ class PlayState extends MusicBeatState
 
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
-			var ret:Dynamic = callOnLuas('onPause', [], false);
-			if (ret != FunkinLua.Function_Stop)
-			{
+
 				openPauseMenu();
-			}
+	
 		}
 
 		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
@@ -3405,8 +3382,7 @@ class PlayState extends MusicBeatState
 		if (((skipHealthCheck && instakillOnMiss) || health <= 0) && !practiceMode && !isDead)
 		{
 			var ret:Dynamic = callOnLuas('onGameOver', [], false);
-			if (ret != FunkinLua.Function_Stop)
-			{
+
 				boyfriend.stunned = true;
 				deathCounter++;
 
@@ -3436,7 +3412,7 @@ class PlayState extends MusicBeatState
 				#end
 				isDead = true;
 				return true;
-			}
+			
 		}
 		return false;
 	}
@@ -3899,17 +3875,6 @@ class PlayState extends MusicBeatState
 						}
 					});
 				}
-
-			case 'Set Property':
-				var killMe:Array<String> = value1.split('.');
-				if (killMe.length > 1)
-				{
-					FunkinLua.setVarInArray(FunkinLua.getPropertyLoopThingWhatever(killMe, true, true), killMe[killMe.length - 1], value2);
-				}
-				else
-				{
-					FunkinLua.setVarInArray(this, value1, value2);
-				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -4071,9 +4036,6 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		var ret:Dynamic = callOnLuas('onEndSong', [], false);
-		if (ret != FunkinLua.Function_Stop && !transitioning)
-		{
 			if (SONG.validScore)
 			{
 				#if !switch
@@ -4180,7 +4142,7 @@ class PlayState extends MusicBeatState
 				changedDifficulty = false;
 			}
 			transitioning = true;
-		}
+		
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
@@ -5259,11 +5221,6 @@ class PlayState extends MusicBeatState
 		}
 		luaArray = [];
 
-		#if hscript
-		if (FunkinLua.hscript != null)
-			FunkinLua.hscript = null;
-		#end
-
 		if (!ClientPrefs.controllerMode)
 		{
 			FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
@@ -5452,9 +5409,7 @@ class PlayState extends MusicBeatState
 
 	public function callOnLuas(event:String, args:Array<Dynamic>, ignoreStops = true, exclusions:Array<String> = null):Dynamic
 	{
-		var returnVal:Dynamic = FunkinLua.Function_Continue;
-		// trace(event, returnVal);
-		return returnVal;
+		return "a";
 	}
 
 	public function setOnLuas(variable:String, arg:Dynamic)
@@ -5490,9 +5445,6 @@ class PlayState extends MusicBeatState
 		setOnLuas('misses', songMisses);
 		setOnLuas('hits', songHits);
 
-		var ret:Dynamic = callOnLuas('onRecalculateRating', [], false);
-		if (ret != FunkinLua.Function_Stop)
-		{
 			if (totalPlayed < 1) // Prevent divide by 0
 				ratingName = '?';
 			else
@@ -5531,7 +5483,7 @@ class PlayState extends MusicBeatState
 				ratingFC = "SDCB";
 			else if (songMisses >= 10)
 				ratingFC = "Clear";
-		}
+	
 		updateScore(badHit); // score will only update after rating is calculated, if it's a badHit, it shouldn't bounce -Ghost
 		setOnLuas('rating', ratingPercent);
 		setOnLuas('ratingName', ratingName);

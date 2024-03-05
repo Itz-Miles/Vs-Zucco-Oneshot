@@ -927,33 +927,6 @@ class PlayState extends MusicBeatState
 				add(foregroundSprites);
 		}
 
-		#if LUA_ALLOWED
-		luaDebugGroup = new FlxTypedGroup<DebugLuaText>();
-		luaDebugGroup.cameras = [camOther];
-		add(luaDebugGroup);
-		#end
-
-		// "GLOBAL" SCRIPTS
-		#if LUA_ALLOWED
-		var filesPushed:Array<String> = [];
-		var foldersToCheck:Array<String> = [Paths.getPreloadPath('scripts/')];
-
-		for (folder in foldersToCheck)
-		{
-			if (FileSystem.exists(folder))
-			{
-				for (file in FileSystem.readDirectory(folder))
-				{
-					if (file.endsWith('.lua') && !filesPushed.contains(file))
-					{
-						luaArray.push(new FunkinLua(folder + file));
-						filesPushed.push(file);
-					}
-				}
-			}
-		}
-		#end
-
 		var gfVersion:String = SONG.gfVersion;
 		if (gfVersion == null || gfVersion.length < 1)
 		{
@@ -1213,41 +1186,11 @@ class PlayState extends MusicBeatState
 		// cameras = [FlxG.cameras.list[1]];
 		startingSong = true;
 
-		#if LUA_ALLOWED
-		for (notetype in noteTypeMap.keys())
-		{
-
-		}
-		for (event in eventPushedMap.keys())
-		{
-
-		}
-		#end
 		noteTypeMap.clear();
 		noteTypeMap = null;
 		eventPushedMap.clear();
 		eventPushedMap = null;
 
-		// SONG SPECIFIC SCRIPTS
-		#if LUA_ALLOWED
-		var filesPushed:Array<String> = [];
-		var foldersToCheck:Array<String> = [Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) + '/')];
-
-		for (folder in foldersToCheck)
-		{
-			if (FileSystem.exists(folder))
-			{
-				for (file in FileSystem.readDirectory(folder))
-				{
-					if (file.endsWith('.lua') && !filesPushed.contains(file))
-					{
-						luaArray.push(new FunkinLua(folder + file));
-						filesPushed.push(file);
-					}
-				}
-			}
-		}
-		#end
 
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)
@@ -1417,20 +1360,7 @@ class PlayState extends MusicBeatState
 
 	public function addTextToDebug(text:String, color:FlxColor)
 	{
-		#if LUA_ALLOWED
-		luaDebugGroup.forEachAlive(function(spr:DebugLuaText)
-		{
-			spr.y += 20;
-		});
 
-		if (luaDebugGroup.members.length > 34)
-		{
-			var blah = luaDebugGroup.members[34];
-			blah.destroy();
-			luaDebugGroup.remove(blah);
-		}
-		luaDebugGroup.insert(0, new DebugLuaText(text, luaDebugGroup, color));
-		#end
 	}
 
 	public function reloadHealthBarColors()
@@ -1483,27 +1413,6 @@ class PlayState extends MusicBeatState
 
 	function startCharacterLua(name:String)
 	{
-		#if LUA_ALLOWED
-		var doPush:Bool = false;
-		var luaFile:String = 'characters/' + name + '.lua';
-
-		luaFile = Paths.getPreloadPath(luaFile);
-		if (Assets.exists(luaFile))
-		{
-			doPush = true;
-		}
-
-
-		if (doPush)
-		{
-			for (script in luaArray)
-			{
-				if (script.scriptName == luaFile)
-					return;
-			}
-			luaArray.push(new FunkinLua(luaFile));
-		}
-		#end
 	}
 
 	public function getLuaObject(tag:String, text:Bool = true):FlxSprite
@@ -5544,38 +5453,12 @@ class PlayState extends MusicBeatState
 	public function callOnLuas(event:String, args:Array<Dynamic>, ignoreStops = true, exclusions:Array<String> = null):Dynamic
 	{
 		var returnVal:Dynamic = FunkinLua.Function_Continue;
-		#if LUA_ALLOWED
-		if (exclusions == null)
-			exclusions = [];
-		for (script in luaArray)
-		{
-			if (exclusions.contains(script.scriptName))
-				continue;
-
-			var ret:Dynamic = script.call(event, args);
-			if (ret == FunkinLua.Function_StopLua && !ignoreStops)
-				break;
-
-			// had to do this because there is a bug in haxe where Stop != Continue doesnt work
-			var bool:Bool = ret == FunkinLua.Function_Continue;
-			if (!bool && ret != 0)
-			{
-				returnVal = cast ret;
-			}
-		}
-		#end
 		// trace(event, returnVal);
 		return returnVal;
 	}
 
 	public function setOnLuas(variable:String, arg:Dynamic)
 	{
-		#if LUA_ALLOWED
-		for (i in 0...luaArray.length)
-		{
-			luaArray[i].set(variable, arg);
-		}
-		#end
 	}
 
 	function StrumPlayAnim(isDad:Bool, id:Int, time:Float)

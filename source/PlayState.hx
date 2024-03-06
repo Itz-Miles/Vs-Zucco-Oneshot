@@ -974,7 +974,6 @@ class PlayState extends MusicBeatState
 		doof.scrollFactor.set();
 		doof.finishThing = startCountdown;
 		doof.nextDialogueThing = startNextDialogue;
-		doof.skipDialogueThing = skipDialogue;
 
 		Conductor.songPosition = -5000 / Conductor.songPosition;
 
@@ -1429,7 +1428,6 @@ class PlayState extends MusicBeatState
 				}
 			}
 			psychDialogue.nextDialogueThing = startNextDialogue;
-			psychDialogue.skipDialogueThing = skipDialogue;
 			psychDialogue.cameras = [camHUD];
 			add(psychDialogue);
 		}
@@ -2564,15 +2562,6 @@ class PlayState extends MusicBeatState
 					char.colorTween.active = false;
 				}
 			}
-
-			for (tween in modchartTweens)
-			{
-				tween.active = false;
-			}
-			for (timer in modchartTimers)
-			{
-				timer.active = false;
-			}
 		}
 
 		super.openSubState(SubState);
@@ -2606,14 +2595,6 @@ class PlayState extends MusicBeatState
 				}
 			}
 
-			for (tween in modchartTweens)
-			{
-				tween.active = true;
-			}
-			for (timer in modchartTimers)
-			{
-				timer.active = true;
-			}
 			paused = false;
 
 			#if desktop
@@ -3256,14 +3237,6 @@ class PlayState extends MusicBeatState
 
 			persistentUpdate = false;
 			persistentDraw = false;
-			for (tween in modchartTweens)
-			{
-				tween.active = true;
-			}
-			for (timer in modchartTimers)
-			{
-				timer.active = true;
-			}
 			openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0],
 				boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollowPos.x, camFollowPos.y));
 

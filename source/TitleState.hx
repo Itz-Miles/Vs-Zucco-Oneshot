@@ -257,7 +257,6 @@ class TitleState extends MusicBeatState
 		titleText.antialiasing = ClientPrefs.globalAntialiasing;
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
-		titleText.scale.set(1.1, 1.1);
 		titleText.screenCenter(X);
 		add(titleText);
 

@@ -1837,7 +1837,7 @@ class PlayState extends MusicBeatState
 	function cacheCountdown()
 	{
 		var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
-		introAssets.set('default', ['3', '2', '1', 'go']);
+		introAssets.set('default', ['3', '2', '1', 'start']);
 		introAssets.set('pixel', ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel']);
 
 		var introAlts:Array<String> = introAssets.get('default');
@@ -1914,7 +1914,7 @@ class PlayState extends MusicBeatState
 			}
 
 			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
-			introAssets.set('default', ['3', '2', '1', 'go']);
+			introAssets.set('default', ['3', '2', '1', 'start']);
 			introAssets.set('pixel', ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel']);
 
 			var introAlts:Array<String> = introAssets.get('default');
@@ -1943,7 +1943,7 @@ class PlayState extends MusicBeatState
 					countdown3 = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 					countdown3.cameras = [camHUD];
 					countdown3.scrollFactor.set();
-					countdown3.scale.set(1.0, 1.0);
+					countdown3.scale.set(1.2, 1.2);
 					countdown3.updateHitbox();
 
 					if (PlayState.isPixelStage)
@@ -1963,7 +1963,7 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
 				case 2:
 					countdown2 = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
-					countdown2.scale.set(1.0, 1.0);
+					countdown2.scale.set(1.2, 1.2);
 					countdown2.cameras = [camHUD];
 					countdown2.scrollFactor.set();
 
@@ -1984,7 +1984,7 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
 				case 3:
 					countdown1 = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
-					countdown1.scale.set(1.0, 1.0);
+					countdown1.scale.set(1.2, 1.2);
 					countdown1.cameras = [camHUD];
 					countdown1.scrollFactor.set();
 
@@ -2010,7 +2010,7 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
 				case 4:
 					countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
-					countdownGo.scale.set(1.0, 1.0);
+					countdownGo.scale.set(1.2, 1.2);
 					countdownGo.cameras = [camHUD];
 					countdownGo.scrollFactor.set();
 
@@ -4585,13 +4585,13 @@ class PlayState extends MusicBeatState
 				switch (note.noteData)
 				{
 					case 0:
-						camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0] - 40, dad.getMidpoint().y - 100 + dad.cameraPosition[1]);
+						camFollow.set(dad.getMidpoint().x + 110 + dad.cameraPosition[0] - 40, dad.getMidpoint().y - 80 + dad.cameraPosition[1]);
 					case 1:
-						camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0], dad.getMidpoint().y - 100 + dad.cameraPosition[1] + 40);
+						camFollow.set(dad.getMidpoint().x + 110 + dad.cameraPosition[0], dad.getMidpoint().y - 80 + dad.cameraPosition[1] + 40);
 					case 2:
-						camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0], dad.getMidpoint().y - 100 + dad.cameraPosition[1] - 40);
+						camFollow.set(dad.getMidpoint().x + 110 + dad.cameraPosition[0], dad.getMidpoint().y - 80 + dad.cameraPosition[1] - 40);
 					case 3:
-						camFollow.set(dad.getMidpoint().x + 150 + dad.cameraPosition[0] + 40, dad.getMidpoint().y - 100 + dad.cameraPosition[1]);
+						camFollow.set(dad.getMidpoint().x + 110 + dad.cameraPosition[0] + 40, dad.getMidpoint().y - 80 + dad.cameraPosition[1]);
 				}
 			}
 			var altAnim:String = note.animSuffix;

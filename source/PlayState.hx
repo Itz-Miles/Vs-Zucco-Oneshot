@@ -1124,7 +1124,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.x = -430;
 		scoreTxt.y = 650;
-		scoreTxt.visible = !ClientPrefs.hideHud;
+		scoreTxt.visible = false;
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
@@ -1172,7 +1172,11 @@ class PlayState extends MusicBeatState
 			switch (daSong)
 			{
 				case "5chool-bre4k":
-					startVideo('cutscenething');
+					FlxG.camera.fade(FlxColor.BLACK, 0);
+					new FlxTimer().start(1, function(tmr:FlxTimer)
+					{
+						startVideo('cutscenething');
+					});
 				default:
 					startCountdown();
 			}
@@ -1180,6 +1184,7 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
+			scoreTxt.visible = !ClientPrefs.hideHud;
 			startCountdown();
 		}
 		RecalculateRating();
@@ -1350,6 +1355,7 @@ class PlayState extends MusicBeatState
 		#end
 		{
 			FlxG.log.warn('Couldnt find video file: ' + name);
+			FlxG.camera.stopFX();
 			startAndEnd();
 			return;
 		}
@@ -1360,6 +1366,7 @@ class PlayState extends MusicBeatState
 		video.play(filepath);
 		video.onEndReached.add(function()
 		{
+			FlxG.camera.stopFX();
 			video.dispose();
 			startAndEnd();
 			return;
@@ -1369,12 +1376,14 @@ class PlayState extends MusicBeatState
 		video.playVideo(filepath);
 		video.finishCallback = function()
 		{
+			FlxG.camera.stopFX();
 			startAndEnd();
 			return;
 		}
 		#end
 		#else
 		FlxG.log.warn('Platform not supported!');
+		FlxG.camera.stopFX();
 		startAndEnd();
 		return;
 		#end
@@ -1382,6 +1391,7 @@ class PlayState extends MusicBeatState
 
 	function startAndEnd()
 	{
+		scoreTxt.visible = !ClientPrefs.hideHud;
 		if (endingSong)
 		{
 			endSong();

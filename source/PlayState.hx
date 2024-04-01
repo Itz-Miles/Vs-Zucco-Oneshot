@@ -1124,7 +1124,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.x = -430;
 		scoreTxt.y = 650;
-		scoreTxt.visible = false;
+		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
@@ -1172,7 +1172,7 @@ class PlayState extends MusicBeatState
 			switch (daSong)
 			{
 				case "5chool-bre4k":
-					FlxG.camera.fade(FlxColor.BLACK, 0);
+					camHUD.fade(FlxColor.BLACK, 0);
 					new FlxTimer().start(1, function(tmr:FlxTimer)
 					{
 						startVideo('cutscenething');
@@ -1184,7 +1184,6 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			scoreTxt.visible = !ClientPrefs.hideHud;
 			startCountdown();
 		}
 		RecalculateRating();
@@ -1391,7 +1390,6 @@ class PlayState extends MusicBeatState
 
 	function startAndEnd()
 	{
-		scoreTxt.visible = !ClientPrefs.hideHud;
 		if (endingSong)
 		{
 			endSong();
@@ -2019,7 +2017,7 @@ class PlayState extends MusicBeatState
 					});
 					FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
 				case 4:
-					countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
+					countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[3]));
 					countdownGo.scale.set(1.2, 1.2);
 					countdownGo.cameras = [camHUD];
 					countdownGo.scrollFactor.set();

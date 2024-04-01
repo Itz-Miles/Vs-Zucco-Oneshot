@@ -41,7 +41,6 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
-
 		WeekData.loadTheFirstEnabledMod();
 
 		#if desktop
@@ -183,6 +182,8 @@ class MainMenuState extends MusicBeatState
 				{
 					if (curSelected != spr.ID)
 					{
+						spr.offset.set();
+
 						FlxTween.tween(spr, {alpha: 0}, 0.4, {
 							ease: FlxEase.quadOut,
 							onComplete: function(twn:FlxTween)
@@ -193,6 +194,15 @@ class MainMenuState extends MusicBeatState
 					}
 					else
 					{
+						switch (curSelected)
+						{
+							case 0:
+								spr.offset.set(30, 60);
+							case 1:
+								spr.offset.set(67, 63);
+							case 2:
+								spr.offset.set(57, 80);
+						}
 						spr.animation.play('click', true);
 					}
 				});
@@ -261,13 +271,21 @@ class MainMenuState extends MusicBeatState
 		{
 			if (spr.ID == curSelected)
 			{
+				switch (curSelected)
+				{
+					case 0:
+						spr.offset.set(36, 5);
+					case 1:
+						spr.offset.set(66, 5);
+					case 2:
+						spr.offset.set(60, 5);
+				}
 				spr.animation.play('selected');
-				spr.offset.x = 40;
 			}
 			else
 			{
 				spr.animation.play('idle');
-				spr.offset.x = 0;
+				spr.offset.set();
 			}
 		});
 	}

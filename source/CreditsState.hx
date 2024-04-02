@@ -84,7 +84,7 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				"Sewshy",
-				"github",
+				"sewshy",
 				"Co-Director",
 				"https://twitter.com",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."

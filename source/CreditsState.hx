@@ -75,18 +75,90 @@ class CreditsState extends MusicBeatState
 		var pisspoop:Array<Array<String>> = [
 			// Name - Icon name - Description - Link - Thoughts
 			['Versus Zucco'],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["name", "github", "role", "https://twitter.com", "add something cool here"],
-			["Sewshy", "sewshy", "Assistant Programmer", "https://twitter.com", "FFFFFF"],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"Sewshy",
+				"github",
+				"Co-Director",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
+			[
+				"name",
+				"github",
+				"role",
+				"https://twitter.com",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+			],
 			[
 				"Itz_Miles",
 				"miles",
@@ -94,6 +166,7 @@ class CreditsState extends MusicBeatState
 				"https://twitter.com/Itz_MilesDev",
 				"\n\n\n\n\n\n\n\n\n what on gods great green earth"
 			],
+			[''],
 			[''],
 			['Psych Engine'],
 			[
@@ -117,6 +190,7 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/yoshubs',
 				'5E99DF'
 			],
+			[''],
 			[''],
 			['Contributors'],
 			[
@@ -222,7 +296,7 @@ class CreditsState extends MusicBeatState
 		for (i in 0...creditsStuff.length)
 		{
 			var isSelectable:Bool = !unselectableCheck(i);
-			var optionText:Alphabet = new Alphabet(300, 200, creditsStuff[i][0], !isSelectable);
+			var optionText:Alphabet = new Alphabet(300, 210, creditsStuff[i][0], !isSelectable);
 			optionText.isMenuItem = true;
 			optionText.targetY = i;
 			optionText.changeX = false;
@@ -253,18 +327,20 @@ class CreditsState extends MusicBeatState
 		}
 
 		descBox = new AttachedSprite();
-		descBox.setColorTransform(700, 200);
+		descBox.setPosition(750, 245);
 		descBox.makeGraphic(1, 1, FlxColor.BLACK);
+		descBox.setGraphicSize(520, 490);
+		descBox.updateHitbox();
 		descBox.xAdd = -10;
 		descBox.yAdd = -10;
 		descBox.alphaMult = 0.6;
 		descBox.alpha = 0.6;
 		add(descBox);
 
-		descText = new FlxText(700, 200, 500, "", 32);
-		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, JUSTIFY /*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
+		descText = new FlxText(750, 200, 500, "", 32);
+		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.scrollFactor.set();
-		// descText.borderSize = 2.4;
+		descText.borderSize = 2.4;
 		descBox.sprTracker = descText;
 		add(descText);
 
@@ -390,14 +466,11 @@ class CreditsState extends MusicBeatState
 		}
 
 		descText.text = creditsStuff[curSelected][2] + '\n\n' + creditsStuff[curSelected][4];
-		descText.y = 200 - 75;
+		descText.y = 125 - 45;
 
 		if (moveTween != null)
 			moveTween.cancel();
-		moveTween = FlxTween.tween(descText, {y: descText.y + 75}, 0.25, {ease: FlxEase.sineOut});
-
-		descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
-		descBox.updateHitbox();
+		moveTween = FlxTween.tween(descText, {y: 125}, 0.25, {ease: FlxEase.sineOut});
 	}
 
 	private function unselectableCheck(num:Int):Bool

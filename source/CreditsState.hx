@@ -117,7 +117,7 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				"Loof",
-				"loof",
+				"kister",
 				"Lead Sound Designer",
 				"https://twitter.com/MrFister4000",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."

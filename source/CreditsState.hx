@@ -113,14 +113,14 @@ class CreditsState extends MusicBeatState
 				"fister",
 				"Lead Sound Designer",
 				"https://twitter.com/MrFister4000",
-				""
+				"“Why am I even here?” \n                   Creepz 2024"
 			],
 			[
 				"Mr. Stache",
 				"stache",
 				"Lead Charter",
 				"https://www.youtube.com/channel/UC5fK5X4_YR-NMWM9heqe9yg",
-				"... \n\n\n\n\n\n\n\n\n\n\n\n   i completely forgot i even worked here"
+				"... \n\n\n\n\n\n\n\n\n\n\n   i completely forgot i even worked here"
 			],
 			[
 				"Jackson",
@@ -142,7 +142,7 @@ class CreditsState extends MusicBeatState
 				"miles",
 				"Lead Programmer",
 				"https://twitter.com/Itz_MilesDev",
-				"It all started earlier last month, when Sewshy got in touch and asked me to join. I declined at first due to lack of free time, but couldn't help myself after fixing a bug or two! I was the only dev capable of duct-taping this mess together on such short notice, but I hope it wads our collective talent into something cool you can enjoy. Miles out!"
+				"   It all started earlier last month, when Sewshy got in touch and asked me to join. I declined at first due to lack of free time, but couldn't help myself after fixing a bug or two! I was the only dev capable of duct-taping this mess together on such short notice, but I hope it wads our collective talent into something cool you can enjoy. Miles out!"
 			],
 			[''],
 			[''],
@@ -315,8 +315,8 @@ class CreditsState extends MusicBeatState
 		descBox.alpha = 0.4;
 		add(descBox);
 
-		descText = new FlxText(750, 200, 500, "", 32);
-		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		descText = new FlxText(750, 200, 500, "", 30);
+		descText.setFormat(Paths.font("ATTFShinGoProDeBold.ttf"), 30, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.scrollFactor.set();
 		descText.borderSize = 2.4;
 		descBox.sprTracker = descText;
@@ -419,7 +419,7 @@ class CreditsState extends MusicBeatState
 				curSelected = creditsStuff.length - 1;
 			if (curSelected >= creditsStuff.length)
 				curSelected = 0;
-			if (curSelected == 13)
+			if (curSelected == 9)
 				why.alpha = 1;
 			else
 				why.alpha = 0;

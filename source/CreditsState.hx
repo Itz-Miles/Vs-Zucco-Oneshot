@@ -27,7 +27,7 @@ class CreditsState extends MusicBeatState
 	private var iconArray:Array<AttachedSprite> = [];
 	private var creditsStuff:Array<Array<String>> = [];
 	var descText:FlxText;
-	var intendedColor:Int;
+	var why:FlxSprite;
 	var colorTween:FlxTween;
 	var descBox:AttachedSprite;
 
@@ -39,8 +39,37 @@ class CreditsState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('gradientbg'));
+		bg.updateHitbox();
+		bg.screenCenter();
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bg);
 
-		persistentUpdate = true;
+		why = new FlxSprite(0, 0, Paths.image('this oneshot was a disaster'));
+		why.setGraphicSize(1280, 720);
+		why.updateHitbox();
+		why.screenCenter();
+		why.antialiasing = ClientPrefs.globalAntialiasing;
+		why.alpha = 0;
+		add(why);
+
+		var cinematic:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('cinematicbar'));
+		cinematic.setGraphicSize(Std.int(bg.width * 1.175));
+		cinematic.updateHitbox();
+		cinematic.screenCenter();
+		cinematic.antialiasing = ClientPrefs.globalAntialiasing;
+		add(cinematic);
+
+		var checker:FlxBackdrop = new FlxBackdrop(Paths.image('chesslooking'), XY, 0, 0);
+		checker.scrollFactor.set(0, 0.1);
+		checker.y -= 80;
+		checker.color = 0xFF3A4262;
+		add(checker);
+
+		checker.offset.x -= 0;
+		checker.offset.y += 0;
+		checker.velocity.x = 20;
+
 		
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
@@ -60,6 +89,7 @@ class CreditsState extends MusicBeatState
 			["name", "github", "role", "https://twitter.com", "FFFFFF"],
 			["Sewshy", "sewshy", "Assistant Programmer", "https://twitter.com", "FFFFFF"],
 			["Itz_Miles", "miles", "Lead Programmer", "https://twitter.com/Itz_MilesDev", "FFFFFF"],
+			[''],
 			['Psych Engine'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
@@ -223,6 +253,11 @@ class CreditsState extends MusicBeatState
 				curSelected = creditsStuff.length - 1;
 			if (curSelected >= creditsStuff.length)
 				curSelected = 0;
+			if (curSelected == 13)
+				why.alpha = 1;
+			else
+				why.alpha = 0;
+
 		} while(unselectableCheck(curSelected));
 
 		var bullShit:Int = 0;

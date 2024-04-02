@@ -109,13 +109,6 @@ class CreditsState extends MusicBeatState
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
-				"Jackson",
-				"adamko",
-				"Voice Actor for Pablo",
-				"https://www.youtube.com/channel/UC1c4V0sWEcpTJ_BCBah9YNA",
-				"nya o o e a i o a eninio eninio unana unana hee - jackson 2024"
-			],
-			[
 				"Loof",
 				"fister",
 				"Lead Sound Designer",
@@ -123,18 +116,25 @@ class CreditsState extends MusicBeatState
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
+				"Mr. Stache",
+				"stache",
+				"Lead Charter",
+				"https://www.youtube.com/channel/UC5fK5X4_YR-NMWM9heqe9yg",
+				"... \n\n\n\n\n\n\n\n\n\n\n\n   i completely forgot i even worked here"
+			],
+			[
+				"Jackson",
+				"adamko",
+				"Voice Actor for Pablo",
+				"https://www.youtube.com/channel/UC1c4V0sWEcpTJ_BCBah9YNA",
+				"nya o o e a i o a eninio eninio unana unana hee - jackson 2024"
+			],
+			[
 				"Mr. Salvage",
 				"salvage",
 				"Voice Actor for Pico",
 				"https://youtube.com/@MrSalvage1?si=NMTPkVaZAnlZA67V",
 				"“MOM GET OFF ME I HAVE A HARD PENIS” -Gaege Gibson"
-			],
-			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
 				"name",

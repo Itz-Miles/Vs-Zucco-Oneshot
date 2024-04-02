@@ -198,9 +198,8 @@ class TitleState extends MusicBeatState
 		picoTitle.animation.addByPrefix('pico', "pico", 24, true);
 		picoTitle.animation.play("pico");
 		picoTitle.updateHitbox();
-		picoTitle.scale.set(0.6, 0.6);
-		picoTitle.x = 95;
-		picoTitle.y = 0;
+		picoTitle.x = 500;
+		picoTitle.y = 250;
 
 		logoBl = new FlxSprite(-150, -100);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumping');
@@ -211,7 +210,6 @@ class TitleState extends MusicBeatState
 		logoBl.x = 20;
 		logoBl.y = 10;
 		swagShader = new ColorSwap();
-
 
 		var easterEgg:String = FlxG.save.data.psychDevsEasterEgg;
 		if (easterEgg == null)
@@ -274,8 +272,6 @@ class TitleState extends MusicBeatState
 		ngSpr.updateHitbox();
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = ClientPrefs.globalAntialiasing;
-
-
 
 		if (initialized)
 			skipIntro();
@@ -452,8 +448,8 @@ class TitleState extends MusicBeatState
 
 		if (curBeat % 1 == 0)
 		{
-			FlxG.camera.zoom = 1.055;
-			FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {ease: FlxEase.quadOut});
+			// FlxG.camera.zoom = 1.055;
+			// FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {ease: FlxEase.quadOut});
 		}
 
 		if (logoBl != null)

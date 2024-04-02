@@ -90,11 +90,11 @@ class CreditsState extends MusicBeatState
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+				"Sleepless\nPhatmann",
+				"sleepling",
+				"Lead Musician",
+				"https://www.youtube.com/channel/UCwI905uZLMUjK2BlcAhjMxg",
+				"When the.. the uh.... peak-o \nis.....     is...... \n         uh...  \npic....co......."
 			],
 			[
 				"name",

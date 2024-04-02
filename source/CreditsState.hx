@@ -97,24 +97,24 @@ class CreditsState extends MusicBeatState
 				"When the.. the uh.... peak-o \nis.....     is...... \n         uh...  \npic....co......."
 			],
 			[
-				"name",
+				"music 2",
 				"github",
 				"role",
 				"https://twitter.com",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
-				"name",
+				"music 3",
 				"github",
 				"role",
 				"https://twitter.com",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
+				"Loof",
+				"loof",
+				"Lead Sound Designer",
+				"https://twitter.com/MrFister4000",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[

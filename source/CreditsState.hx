@@ -74,7 +74,7 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [
 			// Name - Icon name - Description - Link - Thoughts
-			['Versus Zucco'],
+			['Vs Zucco'],
 			[
 				"Szymibymi",
 				"szymi",
@@ -87,7 +87,12 @@ class CreditsState extends MusicBeatState
 				"sewshy",
 				"Co-Director",
 				"https://twitter.com/Mohamed43225725",
-				"im just kinda here haha, love y'all <3"
+				"are you flirting with my sister\n
+				yes i am\n
+				do you wanna die\n
+				yes i do\n
+				wait what?..\n
+				take me sweet death!!!\n"
 			],
 			[
 				"Sleepless\nPhatmann",

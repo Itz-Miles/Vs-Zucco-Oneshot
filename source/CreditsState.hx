@@ -80,14 +80,14 @@ class CreditsState extends MusicBeatState
 				"szymi",
 				"Director",
 				"https://twitter.com/Szymi_bymi",
-				'"yoo this looks soo cool\nits simple but very nice"'
+				'"WHO POSTED MY NUDES ON TWITTER.COM"'
 			],
 			[
 				"Sewshy",
-				"github",
+				"sewshy",
 				"Co-Director",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+				"https://twitter.com/Mohamed43225725",
+				"im just kinda here haha, love y'all <3"
 			],
 			[
 				"Sleepless\nPhatmann",
@@ -100,15 +100,15 @@ class CreditsState extends MusicBeatState
 				"Ange!",
 				"ange",
 				"Co-Musician",
-				"https://twitter.com",
+				"https://twitter.com/Angesilly",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
-				"music 3",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+				"Jackson",
+				"adamko",
+				"Voice Actor for Pablo",
+				"https://www.youtube.com/channel/UC1c4V0sWEcpTJ_BCBah9YNA",
+				"nya o o e a i o a eninio eninio unana unana hee - jackson 2024"
 			],
 			[
 				"Loof",
@@ -118,11 +118,11 @@ class CreditsState extends MusicBeatState
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+				"Mr. Salvage",
+				"salvage",
+				"Voice Actor for Pico",
+				"https://youtube.com/@MrSalvage1?si=NMTPkVaZAnlZA67V",
+				"“MOM GET OFF ME I HAVE A HARD PENIS” -Gaege Gibson"
 			],
 			[
 				"name",

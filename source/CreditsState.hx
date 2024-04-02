@@ -113,7 +113,7 @@ class CreditsState extends MusicBeatState
 				"fister",
 				"Lead Sound Designer",
 				"https://twitter.com/MrFister4000",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+				""
 			],
 			[
 				"Mr. Stache",
@@ -129,47 +129,13 @@ class CreditsState extends MusicBeatState
 				"https://www.youtube.com/channel/UC1c4V0sWEcpTJ_BCBah9YNA",
 				"nya o o e a i o a eninio eninio unana unana hee - jackson 2024"
 			],
-			[
-				"Loof",
-				"loof",
-				"Lead Sound Designer",
-				"https://twitter.com/MrFister4000",
-				"“Why am I even here?” Creepz 2024"
-			],
+			
 			[
 				"Mr. Salvage",
 				"salvage",
 				"Voice Actor for Pico",
 				"https://youtube.com/@MrSalvage1?si=NMTPkVaZAnlZA67V",
 				"“MOM GET OFF ME I HAVE A HARD PENIS” -Gaege Gibson"
-			],
-			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
-			],
-			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
-			],
-			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
-			],
-			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],
 			[
 				"Itz_Miles",

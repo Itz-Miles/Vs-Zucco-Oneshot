@@ -97,9 +97,9 @@ class CreditsState extends MusicBeatState
 				"When the.. the uh.... peak-o \nis.....     is...... \n         uh...  \npic....co......."
 			],
 			[
-				"music 2",
-				"github",
-				"role",
+				"Ange!",
+				"ange",
+				"Co-Musician",
 				"https://twitter.com",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
 			],

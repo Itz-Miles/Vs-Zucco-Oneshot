@@ -130,8 +130,6 @@ class CreditsState extends MusicBeatState
 				"nya o o e a i o a eninio eninio unana unana hee - jackson 2024"
 			],
 			[
-<<<<<<< Updated upstream
-=======
 				"Loof",
 				"loof",
 				"Lead Sound Designer",
@@ -139,7 +137,6 @@ class CreditsState extends MusicBeatState
 				"“Why am I even here?” Creepz 2024"
 			],
 			[
->>>>>>> Stashed changes
 				"Mr. Salvage",
 				"salvage",
 				"Voice Actor for Pico",

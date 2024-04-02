@@ -127,7 +127,7 @@ class CreditsState extends MusicBeatState
 				"adamko",
 				"Voice Actor for Pablo",
 				"https://www.youtube.com/channel/UC1c4V0sWEcpTJ_BCBah9YNA",
-				"nya o o e a i o a eninio eninio unana unana hee - jackson 2024"
+				"“nya o o e a i o a eninio eninio unana unana hee” \n            jackson 2024"
 			],
 			
 			[
@@ -135,7 +135,7 @@ class CreditsState extends MusicBeatState
 				"salvage",
 				"Voice Actor for Pico",
 				"https://youtube.com/@MrSalvage1?si=NMTPkVaZAnlZA67V",
-				"“MOM GET OFF ME I HAVE A HARD PENIS” -Gaege Gibson"
+				"“MOM GET OFF ME I HAVE A HARD PENIS” \n            Gaege Gibson"
 			],
 			[
 				"Itz_Miles",

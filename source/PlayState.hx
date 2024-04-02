@@ -1729,7 +1729,7 @@ class PlayState extends MusicBeatState
 					camFollow.set(camPosX, camPosY);
 					camFollowPos.setPosition(camPosX, camPosY);
 					FlxG.camera.zoom = 0.8;
-					cameraSpeed = 1;
+					cameraSpeed = 1.5;
 
 					calledTimes++;
 					if (calledTimes > 1)
@@ -2845,7 +2845,7 @@ class PlayState extends MusicBeatState
 
 		if (!inCutscene)
 		{
-			var lerpVal:Float = CoolUtil.boundTo(elapsed * 6.2 * cameraSpeed * playbackRate, 0, 1);
+			var lerpVal:Float = CoolUtil.boundTo(elapsed * 6.6 * cameraSpeed * playbackRate, 0, 1);
 			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 			if (!startingSong
 				&& !endingSong

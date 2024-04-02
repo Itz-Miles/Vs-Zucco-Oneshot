@@ -14,7 +14,6 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-
 import lime.utils.Assets;
 
 using StringTools;
@@ -31,7 +30,7 @@ class CreditsState extends MusicBeatState
 	var colorTween:FlxTween;
 	var descBox:AttachedSprite;
 
-	var offsetThing:Float = -75;
+	var offsetThing:Float = -475;
 
 	override function create()
 	{
@@ -70,84 +69,191 @@ class CreditsState extends MusicBeatState
 		checker.offset.y += 0;
 		checker.velocity.x = 20;
 
-		
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
-		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+		var pisspoop:Array<Array<String>> = [
+			// Name - Icon name - Description - Link - Thoughts
 			['Versus Zucco'],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
-			["name", "github", "role", "https://twitter.com", "FFFFFF"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
+			["name", "github", "role", "https://twitter.com", "add something cool here"],
 			["Sewshy", "sewshy", "Assistant Programmer", "https://twitter.com", "FFFFFF"],
-			["Itz_Miles", "miles", "Lead Programmer", "https://twitter.com/Itz_MilesDev", "FFFFFF"],
+			[
+				"Itz_Miles",
+				"miles",
+				"Lead Programmer",
+				"https://twitter.com/Itz_MilesDev",
+				"\n\n\n\n\n\n\n\n\n what on gods great green earth"
+			],
 			[''],
 			['Psych Engine'],
-			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
-			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
-			['shubs',				'shubs',			'Additional Programmer of Psych Engine',						'https://twitter.com/yoshubs',			'5E99DF'],
+			[
+				'Shadow Mario',
+				'shadowmario',
+				'Main Programmer of Psych Engine',
+				'https://twitter.com/Shadow_Mario_',
+				'444444'
+			],
+			[
+				'RiverOaken',
+				'river',
+				'Main Artist/Animator of Psych Engine',
+				'https://twitter.com/RiverOaken',
+				'B42F71'
+			],
+			[
+				'shubs',
+				'shubs',
+				'Additional Programmer of Psych Engine',
+				'https://twitter.com/yoshubs',
+				'5E99DF'
+			],
 			[''],
 			['Contributors'],
-			['bb-panzu',			'bb',				'Ex-Programmer of Psych Engine',								'https://twitter.com/bbsub3',			'3E813A'],
-			['iFlicky',				'flicky',			'Composer of Psync and Tea Time\nMade the Dialogue Sounds',		'https://twitter.com/flicky_i',			'9E29CF'],
-			['SqirraRNG',			'sqirra',			'Crash Handler and Base code for\nChart Editor\'s Waveform',	'https://twitter.com/gedehari',			'E1843A'],
-			['EliteMasterEric',		'mastereric',		'Runtime Shaders support',										'https://twitter.com/EliteMasterEric',	'FFBD40'],
-			['PolybiusProxy',		'proxy',			'.MP4 Video Loader Library (hxCodec)',							'https://twitter.com/polybiusproxy',	'DCD294'],
-			['KadeDev',				'kade',				'Fixed some cool stuff on Chart Editor\nand other PRs',			'https://twitter.com/kade0912',			'64A250'],
-			['Keoiki',				'keoiki',			'Note Splash Animations',										'https://twitter.com/Keoiki_',			'D2D2D2'],
-			['Nebula the Zorua',	'nebula',			'LUA JIT Fork and some Lua reworks',							'https://twitter.com/Nebula_Zorua',		'7D40B2'],
-			['Smokey',				'smokey',			'Sprite Atlas Support',											'https://twitter.com/Smokey_5_',		'483D92'],
+			[
+				'bb-panzu',
+				'bb',
+				'Ex-Programmer of Psych Engine',
+				'https://twitter.com/bbsub3',
+				'3E813A'
+			],
+			[
+				'iFlicky',
+				'flicky',
+				'Composer of Psync and Tea Time\nMade the Dialogue Sounds',
+				'https://twitter.com/flicky_i',
+				'9E29CF'
+			],
+			[
+				'SqirraRNG',
+				'sqirra',
+				'Crash Handler and Base code for\nChart Editor\'s Waveform',
+				'https://twitter.com/gedehari',
+				'E1843A'
+			],
+			[
+				'EliteMasterEric',
+				'mastereric',
+				'Runtime Shaders support',
+				'https://twitter.com/EliteMasterEric',
+				'FFBD40'
+			],
+			[
+				'PolybiusProxy',
+				'proxy',
+				'.MP4 Video Loader Library (hxCodec)',
+				'https://twitter.com/polybiusproxy',
+				'DCD294'
+			],
+			[
+				'KadeDev',
+				'kade',
+				'Fixed some cool stuff on Chart Editor\nand other PRs',
+				'https://twitter.com/kade0912',
+				'64A250'
+			],
+			[
+				'Keoiki',
+				'keoiki',
+				'Note Splash Animations',
+				'https://twitter.com/Keoiki_',
+				'D2D2D2'
+			],
+			[
+				'Nebula the Zorua',
+				'nebula',
+				'LUA JIT Fork and some Lua reworks',
+				'https://twitter.com/Nebula_Zorua',
+				'7D40B2'
+			],
+			[
+				'Smokey',
+				'smokey',
+				'Sprite Atlas Support',
+				'https://twitter.com/Smokey_5_',
+				'483D92'
+			],
 			[''],
 			["Funkin' Crew"],
-			['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",							'https://twitter.com/ninja_muffin99',	'CF2D2D'],
-			['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",								'https://twitter.com/PhantomArcade3K',	'FADC45'],
-			['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",								'https://twitter.com/evilsk8r',			'5ABD4B'],
-			['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",								'https://twitter.com/kawaisprite',		'378FC7']
+			[
+				'ninjamuffin99',
+				'ninjamuffin99',
+				"Programmer of Friday Night Funkin'",
+				'https://twitter.com/ninja_muffin99',
+				'CF2D2D'
+			],
+			[
+				'PhantomArcade',
+				'phantomarcade',
+				"Animator of Friday Night Funkin'",
+				'https://twitter.com/PhantomArcade3K',
+				'FADC45'
+			],
+			[
+				'evilsk8r',
+				'evilsk8r',
+				"Artist of Friday Night Funkin'",
+				'https://twitter.com/evilsk8r',
+				'5ABD4B'
+			],
+			[
+				'kawaisprite',
+				'kawaisprite',
+				"Composer of Friday Night Funkin'",
+				'https://twitter.com/kawaisprite',
+				'378FC7'
+			]
 		];
-		
-		for(i in pisspoop){
+
+		for (i in pisspoop)
+		{
 			creditsStuff.push(i);
 		}
-	
+
 		for (i in 0...creditsStuff.length)
 		{
 			var isSelectable:Bool = !unselectableCheck(i);
-			var optionText:Alphabet = new Alphabet(850, 300, creditsStuff[i][0], !isSelectable);
+			var optionText:Alphabet = new Alphabet(300, 200, creditsStuff[i][0], !isSelectable);
 			optionText.isMenuItem = true;
 			optionText.targetY = i;
 			optionText.changeX = false;
 			optionText.snapToPosition();
 			grpOptions.add(optionText);
 
-			if(isSelectable) {
-				if(creditsStuff[i][5] != null)
+			if (isSelectable)
+			{
+				if (creditsStuff[i][5] != null)
 				{
 					Paths.currentModDirectory = creditsStuff[i][5];
 				}
 
 				var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[i][1]);
-				icon.xAdd = - icon.width;
+				icon.xAdd = -icon.width;
 				icon.sprTracker = optionText;
-	
+
 				// using a FlxGroup is too much fuss!
 				iconArray.push(icon);
 				add(icon);
 				Paths.currentModDirectory = '';
 
-				if(curSelected == -1) curSelected = i;
+				if (curSelected == -1)
+					curSelected = i;
 			}
-			else optionText.alignment = CENTERED;
+			else
+				optionText.alignment = CENTERED;
 		}
-		
+
 		descBox = new AttachedSprite();
+		descBox.setColorTransform(700, 200);
 		descBox.makeGraphic(1, 1, FlxColor.BLACK);
 		descBox.xAdd = -10;
 		descBox.yAdd = -10;
@@ -155,10 +261,10 @@ class CreditsState extends MusicBeatState
 		descBox.alpha = 0.6;
 		add(descBox);
 
-		descText = new FlxText(50, FlxG.height + offsetThing - 25, 1180, "", 32);
-		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER/*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
+		descText = new FlxText(700, 200, 500, "", 32);
+		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, JUSTIFY /*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
 		descText.scrollFactor.set();
-		//descText.borderSize = 2.4;
+		// descText.borderSize = 2.4;
 		descBox.sprTracker = descText;
 		add(descText);
 
@@ -168,6 +274,7 @@ class CreditsState extends MusicBeatState
 
 	var quitting:Bool = false;
 	var holdTime:Float = 0;
+
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music.volume < 0.7)
@@ -175,12 +282,13 @@ class CreditsState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		if(!quitting)
+		if (!quitting)
 		{
-			if(creditsStuff.length > 1)
+			if (creditsStuff.length > 1)
 			{
 				var shiftMult:Int = 1;
-				if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
+				if (FlxG.keys.pressed.SHIFT)
+					shiftMult = 3;
 
 				var upP = controls.UI_UP_P;
 				var downP = controls.UI_DOWN_P;
@@ -196,25 +304,27 @@ class CreditsState extends MusicBeatState
 					holdTime = 0;
 				}
 
-				if(controls.UI_DOWN || controls.UI_UP)
+				if (controls.UI_DOWN || controls.UI_UP)
 				{
 					var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
 					holdTime += elapsed;
 					var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
 
-					if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
+					if (holdTime > 0.5 && checkNewHold - checkLastHold > 0)
 					{
 						changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
 					}
 				}
 			}
 
-			if(controls.ACCEPT && (creditsStuff[curSelected][3] == null || creditsStuff[curSelected][3].length > 4)) {
+			if (controls.ACCEPT && (creditsStuff[curSelected][3] == null || creditsStuff[curSelected][3].length > 4))
+			{
 				CoolUtil.browserLoad(creditsStuff[curSelected][3]);
 			}
 			if (controls.BACK)
 			{
-				if(colorTween != null) {
+				if (colorTween != null)
+				{
 					colorTween.cancel();
 				}
 				FlxG.sound.play(Paths.sound('cancelMenu'));
@@ -222,21 +332,21 @@ class CreditsState extends MusicBeatState
 				quitting = true;
 			}
 		}
-		
+
 		for (item in grpOptions.members)
 		{
-			if(!item.bold)
+			if (!item.bold)
 			{
 				var lerpVal:Float = CoolUtil.boundTo(elapsed * 12, 0, 1);
-				if(item.targetY == 0)
+				if (item.targetY == 0)
 				{
 					var lastX:Float = item.x;
-					item.x = 700;
-					item.x = FlxMath.lerp(lastX, item.x - 70, lerpVal);
+					item.x = 250;
+					item.x = FlxMath.lerp(lastX, item.x + 70, lerpVal);
 				}
 				else
 				{
-					item.x = FlxMath.lerp(item.x, 750, lerpVal);
+					item.x = FlxMath.lerp(item.x, 200, lerpVal);
 				}
 			}
 		}
@@ -244,10 +354,12 @@ class CreditsState extends MusicBeatState
 	}
 
 	var moveTween:FlxTween = null;
+
 	function changeSelection(change:Int = 0)
 	{
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-		do {
+		do
+		{
 			curSelected += change;
 			if (curSelected < 0)
 				curSelected = creditsStuff.length - 1;
@@ -257,8 +369,8 @@ class CreditsState extends MusicBeatState
 				why.alpha = 1;
 			else
 				why.alpha = 0;
-
-		} while(unselectableCheck(curSelected));
+		}
+		while (unselectableCheck(curSelected));
 
 		var bullShit:Int = 0;
 
@@ -267,27 +379,29 @@ class CreditsState extends MusicBeatState
 			item.targetY = bullShit - curSelected;
 			bullShit++;
 
-			if(!unselectableCheck(bullShit-1)) {
+			if (!unselectableCheck(bullShit - 1))
+			{
 				item.alpha = 0.6;
-				if (item.targetY == 0) {
+				if (item.targetY == 0)
+				{
 					item.alpha = 1;
 				}
 			}
 		}
 
-		descText.text = creditsStuff[curSelected][2];
-		descText.y = FlxG.height - descText.height + offsetThing - 60;
+		descText.text = creditsStuff[curSelected][2] + '\n\n' + creditsStuff[curSelected][4];
+		descText.y = 200 - 75;
 
-		if(moveTween != null) moveTween.cancel();
-		moveTween = FlxTween.tween(descText, {y : descText.y + 75}, 0.25, {ease: FlxEase.sineOut});
+		if (moveTween != null)
+			moveTween.cancel();
+		moveTween = FlxTween.tween(descText, {y: descText.y + 75}, 0.25, {ease: FlxEase.sineOut});
 
 		descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
 		descBox.updateHitbox();
 	}
 
-
-
-	private function unselectableCheck(num:Int):Bool {
+	private function unselectableCheck(num:Int):Bool
+	{
 		return creditsStuff[num].length <= 1;
 	}
 }

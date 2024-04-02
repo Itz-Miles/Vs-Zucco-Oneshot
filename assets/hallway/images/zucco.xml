@@ -1,35 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="zucco.png">
-	<!-- Created with Adobe Animate version 22.0.3.179 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="zucco0000" x="0" y="0" width="285" height="476" frameX="0" frameY="-10" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0001" x="0" y="0" width="285" height="476" frameX="0" frameY="-10" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0002" x="285" y="0" width="287" height="475" frameX="0" frameY="-11" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0003" x="285" y="0" width="287" height="475" frameX="0" frameY="-11" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0004" x="572" y="0" width="287" height="481" frameX="-1" frameY="-5" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0005" x="572" y="0" width="287" height="481" frameX="-1" frameY="-5" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0006" x="859" y="0" width="287" height="483" frameX="-1" frameY="-3" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0007" x="859" y="0" width="287" height="483" frameX="-1" frameY="-3" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0008" x="1146" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0009" x="1146" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0010" x="1434" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0011" x="1434" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0012" x="1434" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0013" x="1434" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="zucco0014" x="1434" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486"/>
-	<SubTexture name="surprise0000" x="1722" y="0" width="283" height="479" frameX="0" frameY="-6" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0001" x="1722" y="0" width="283" height="479" frameX="0" frameY="-6" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0002" x="0" y="486" width="288" height="485" frameX="-2" frameY="0" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0003" x="0" y="486" width="288" height="485" frameX="-2" frameY="0" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0004" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0005" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0006" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0007" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0008" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0009" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0010" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0011" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0012" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0013" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
-	<SubTexture name="surprise0014" x="288" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485"/>
+<SubTexture name="zucco0000" x="855" y="486" width="285" height="476" frameX="0" frameY="-10" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0001" x="855" y="486" width="285" height="476" frameX="0" frameY="-10" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0002" x="1151" y="0" width="287" height="475" frameX="0" frameY="-11" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0003" x="1151" y="0" width="287" height="475" frameX="0" frameY="-11" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0004" x="285" y="486" width="287" height="481" frameX="-1" frameY="-5" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0005" x="285" y="486" width="287" height="481" frameX="-1" frameY="-5" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0006" x="864" y="0" width="287" height="483" frameX="-1" frameY="-3" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0007" x="864" y="0" width="287" height="483" frameX="-1" frameY="-3" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0008" x="0" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0009" x="0" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0010" x="288" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0011" x="288" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0012" x="288" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0013" x="288" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486" />
+<SubTexture name="zucco0014" x="288" y="0" width="288" height="486" frameX="-1" frameY="0" frameWidth="289" frameHeight="486" />
+<SubTexture name="surprise0000" x="572" y="486" width="283" height="479" frameX="0" frameY="-6" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0001" x="572" y="486" width="283" height="479" frameX="0" frameY="-6" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0002" x="576" y="0" width="288" height="485" frameX="-2" frameY="0" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0003" x="576" y="0" width="288" height="485" frameX="-2" frameY="0" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0004" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0005" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0006" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0007" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0008" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0009" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0010" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0011" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0012" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0013" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
+<SubTexture name="surprise0014" x="0" y="486" width="285" height="483" frameX="-1" frameY="-2" frameWidth="290" frameHeight="485" />
 </TextureAtlas>

@@ -1354,7 +1354,7 @@ class PlayState extends MusicBeatState
 		#end
 		{
 			FlxG.log.warn('Couldnt find video file: ' + name);
-			FlxG.camera.stopFX();
+			camHUD.stopFX();
 			startAndEnd();
 			return;
 		}
@@ -1365,7 +1365,7 @@ class PlayState extends MusicBeatState
 		video.play(filepath);
 		video.onEndReached.add(function()
 		{
-			FlxG.camera.stopFX();
+			camHUD.stopFX();
 			video.dispose();
 			startAndEnd();
 			return;
@@ -1375,14 +1375,14 @@ class PlayState extends MusicBeatState
 		video.playVideo(filepath);
 		video.finishCallback = function()
 		{
-			FlxG.camera.stopFX();
+			camHUD.stopFX();
 			startAndEnd();
 			return;
 		}
 		#end
 		#else
 		FlxG.log.warn('Platform not supported!');
-		FlxG.camera.stopFX();
+		camHUD.stopFX();
 		startAndEnd();
 		return;
 		#end
@@ -1869,6 +1869,7 @@ class PlayState extends MusicBeatState
 		}
 
 		inCutscene = false;
+		camHUD.stopFX();
 
 		if (skipCountdown || startOnTime > 0)
 			skipArrowStartTween = true;

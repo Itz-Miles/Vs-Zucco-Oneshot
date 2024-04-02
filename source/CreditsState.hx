@@ -76,11 +76,11 @@ class CreditsState extends MusicBeatState
 			// Name - Icon name - Description - Link - Thoughts
 			['Versus Zucco'],
 			[
-				"name",
-				"github",
-				"role",
-				"https://twitter.com",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
+				"Szymibymi",
+				"szymi",
+				"Director",
+				"https://twitter.com/Szymi_bymi",
+				'"yoo this looks soo cool\nits simple but very nice"'
 			],
 			[
 				"Sewshy",

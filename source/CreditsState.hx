@@ -164,7 +164,7 @@ class CreditsState extends MusicBeatState
 				"miles",
 				"Lead Programmer",
 				"https://twitter.com/Itz_MilesDev",
-				"\n\n\n\n\n\n\n\n\n what on gods great green earth"
+				"It all started earlier last month, when Sewshy got in touch and asked me to join. I declined at first due to lack of free time, but couldn't help myself after fixing a bug or two! I was the only dev capable of duct-taping this mess together on such short notice, but I hope it wads our collective talent into something cool you can enjoy. Miles out!"
 			],
 			[''],
 			[''],
@@ -333,8 +333,8 @@ class CreditsState extends MusicBeatState
 		descBox.updateHitbox();
 		descBox.xAdd = -10;
 		descBox.yAdd = -10;
-		descBox.alphaMult = 0.6;
-		descBox.alpha = 0.6;
+		descBox.alphaMult = 0.4;
+		descBox.alpha = 0.4;
 		add(descBox);
 
 		descText = new FlxText(750, 200, 500, "", 32);
@@ -457,7 +457,7 @@ class CreditsState extends MusicBeatState
 
 			if (!unselectableCheck(bullShit - 1))
 			{
-				item.alpha = 0.6;
+				item.alpha = 0.4;
 				if (item.targetY == 0)
 				{
 					item.alpha = 1;

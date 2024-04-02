@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="visualizer.png">
+<SubTexture name="visualizer0000" x="0" y="0" width="1307" height="646" frameX="0" frameY="-70" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0001" x="0" y="646" width="1307" height="525" frameX="0" frameY="-191" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0002" x="0" y="1171" width="1307" height="409" frameX="0" frameY="-307" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0003" x="0" y="1580" width="1307" height="319" frameX="0" frameY="-397" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0004" x="0" y="1899" width="1307" height="232" frameX="0" frameY="-485" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0005" x="0" y="2131" width="1307" height="177" frameX="0" frameY="-539" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0006" x="0" y="2131" width="1307" height="177" frameX="0" frameY="-539" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0007" x="0" y="2131" width="1307" height="177" frameX="0" frameY="-539" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0008" x="0" y="2308" width="1307" height="716" frameX="0" frameY="0" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0009" x="0" y="3024" width="1307" height="592" frameX="0" frameY="-124" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0010" x="0" y="3616" width="1307" height="484" frameX="0" frameY="-232" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0011" x="0" y="4100" width="1307" height="385" frameX="0" frameY="-331" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0012" x="0" y="4485" width="1307" height="307" frameX="0" frameY="-409" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0013" x="0" y="2131" width="1307" height="177" frameX="0" frameY="-539" frameWidth="1307" frameHeight="717" />
+<SubTexture name="visualizer0014" x="0" y="2131" width="1307" height="177" frameX="0" frameY="-539" frameWidth="1307" frameHeight="717" />
+</TextureAtlas>

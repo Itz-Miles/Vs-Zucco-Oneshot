@@ -184,13 +184,10 @@ class TitleState extends MusicBeatState
 		Conductor.changeBPM(102);
 
 		visualizer = new FlxSprite(0, 0);
-		visualizer.frames = Paths.getSparrowAtlas('visualiser');
-		visualizer.animation.addByPrefix('visualiser', "visualiser", 24, true);
-		visualizer.animation.play("visualiser");
+		visualizer.frames = Paths.getSparrowAtlas('visualizer');
+		visualizer.animation.addByPrefix('visualizer', "visualizer", 24, true);
+		visualizer.animation.play("visualizer");
 		visualizer.updateHitbox();
-		visualizer.scale.set(0.7, 0.7);
-		visualizer.x = 0;
-		visualizer.y = -40;
 		visualizer.screenCenter();
 
 		picoTitle = new FlxSprite(0, 0);
@@ -530,7 +527,7 @@ class TitleState extends MusicBeatState
 				transitioning = true;
 				remove(ngSpr);
 				remove(credGroup);
-				FlxG.camera.flash(FlxColor.WHITE, 3);
+				FlxG.camera.flash(FlxColor.WHITE, 2);
 				sound.onComplete = function()
 				{
 					FlxG.sound.playMusic(Paths.music('menumusic'), 0);

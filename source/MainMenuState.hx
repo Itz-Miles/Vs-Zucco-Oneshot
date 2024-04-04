@@ -240,8 +240,13 @@ class MainMenuState extends MusicBeatState
 		{
 			PlayState.storyPlaylist = ['5chool-bre4k'];
 			PlayState.isStoryMode = true;
+			PlayState.storyDifficulty = 2;
+			CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
+			var diffic = CoolUtil.getDifficultyFilePath();
+			if (diffic == null)
+				diffic = '';
 
-			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase(), PlayState.storyPlaylist[0].toLowerCase());
+			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
 			PlayState.campaignScore = 0;
 			PlayState.campaignMisses = 0;
 		}

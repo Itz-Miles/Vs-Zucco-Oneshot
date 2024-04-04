@@ -4589,7 +4589,7 @@ class PlayState extends MusicBeatState
 		}
 		else if (!note.noAnimation)
 		{
-			if (!SONG.notes[curSection].mustHitSection && !isDead)
+			if (!SONG.notes[curSection].mustHitSection && !isDead && !isCameraOnForcedPos)
 			{
 				switch (note.noteData)
 				{
@@ -4700,7 +4700,7 @@ class PlayState extends MusicBeatState
 
 			if (!note.noAnimation)
 			{
-				if (SONG.notes[curSection].mustHitSection && !isDead)
+				if (SONG.notes[curSection].mustHitSection && !isDead && !isCameraOnForcedPos)
 				{
 					switch (note.noteData)
 					{

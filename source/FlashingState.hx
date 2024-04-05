@@ -54,9 +54,9 @@ class FlashingState extends MusicBeatState
 		warnText = new FlxText(0, 0, FlxG.width,
 			"Hey, watch out!\n
 			This Mod contains some flashing lights!\n
-			Press ENTER to disable them now or go to Options Menu.\n
-			Press ESCAPE to ignore this message.\n
-			You've been warned!",
+            It can be disabled through the Options Menu!\n
+			Press ESCAPE to start playing!.\n
+			Enjoy The Mod!",
 			32);
 		warnText.setFormat(Paths.font("ATTFShinGoProDeBold.ttf"), 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
@@ -83,7 +83,7 @@ class FlashingState extends MusicBeatState
 				} else {
 					FlxG.sound.play(Paths.sound('selec'));
 					FlxTween.tween(warnText, {y: 2000}, 2.2, {ease: FlxEase.expoInOut});
-					FlxTween.tween(warnText, {alpha: 1}, 1, {
+					FlxTween.tween(warnText, {alpha: 0}, 1, {
 						onComplete: function (twn:FlxTween) {
 							MusicBeatState.switchState(new TitleState());
 						}

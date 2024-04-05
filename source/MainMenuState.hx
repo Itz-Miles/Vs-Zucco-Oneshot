@@ -38,6 +38,7 @@ class MainMenuState extends MusicBeatState
 	var debugKeys:Array<FlxKey>;
 	var lockerBG:FlxSprite;
 	var light:FlxSprite;
+	var escDude:FlxSprite;
 
 	override function create()
 	{
@@ -88,6 +89,16 @@ class MainMenuState extends MusicBeatState
 		light = new FlxSprite(0, 0, Paths.image('light'));
 		light.blend = ADD;
 		add(light);
+
+		var escDude:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('escdude'));
+		escDude.updateHitbox();
+		// escDude.screenCenter();
+		escDude.x = 30;
+		escDude.y = 440;
+		escDude.scale.set(0.4, 0.4);
+		escDude.alpha = 0.5;
+		escDude.antialiasing = ClientPrefs.globalAntialiasing;
+		add(escDude);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();

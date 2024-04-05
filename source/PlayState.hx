@@ -1948,6 +1948,7 @@ class PlayState extends MusicBeatState
 			{
 				case 0:
 					FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
+				case 1:
 					countdown3 = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 					countdown3.cameras = [camHUD];
 					countdown3.scrollFactor.set();
@@ -1968,8 +1969,8 @@ class PlayState extends MusicBeatState
 							countdown3.destroy();
 						}
 					});
-				case 1:
 					FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
+				case 2:
 					countdown2 = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 					countdown2.scale.set(1.2, 1.2);
 					countdown2.cameras = [camHUD];
@@ -1989,8 +1990,8 @@ class PlayState extends MusicBeatState
 							countdown2.destroy();
 						}
 					});
-				case 2:
 					FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
+				case 3:
 					countdown1 = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 					countdown1.scale.set(1.2, 1.2);
 					countdown1.cameras = [camHUD];
@@ -2015,8 +2016,8 @@ class PlayState extends MusicBeatState
 							countdown1.destroy();
 						}
 					});
-				case 3:
 					FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
+				case 4:
 					countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[3]));
 					countdownGo.scale.set(1.2, 1.2);
 					countdownGo.cameras = [camHUD];
@@ -2037,7 +2038,6 @@ class PlayState extends MusicBeatState
 						}
 					});
 					add(healthSign);
-				case 4:
 			}
 
 			notes.forEachAlive(function(note:Note)

@@ -25,19 +25,19 @@
 				34883.7209302326,
 				[
 					[
+						"Add Camera Zoom",
+						"0.03",
+						""
+					],
+					[
 						"Camera Follow Pos",
-						"350",
-						"750"
+						"450",
+						"700"
 					],
 					[
 						"Set CamZoom",
 						"0.75",
 						""
-					],
-					[
-						"Add Camera Zoom",
-						"0.03",
-						"0.03"
 					],
 					[
 						"Change Character",

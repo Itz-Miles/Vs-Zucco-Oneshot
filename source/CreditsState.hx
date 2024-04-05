@@ -107,6 +107,7 @@ class CreditsState extends MusicBeatState
 				"Co-Musician",
 				"https://twitter.com/Angesilly",
 				"i know you read this"
+			],
 			[
 				"Loof",
 				"fister",

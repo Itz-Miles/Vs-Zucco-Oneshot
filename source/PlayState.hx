@@ -4257,6 +4257,7 @@ class PlayState extends MusicBeatState
 		// trace('Pressed: ' + eventKey);
 
 		if (!cpuControlled
+			&& !inCutscene
 			&& startedCountdown
 			&& !paused
 			&& key > -1
@@ -4363,7 +4364,7 @@ class PlayState extends MusicBeatState
 	{
 		var eventKey:FlxKey = event.keyCode;
 		var key:Int = getKeyFromEvent(eventKey);
-		if (!cpuControlled && startedCountdown && !paused && key > -1)
+		if (!cpuControlled && !inCutscene && startedCountdown && !paused && key > -1)
 		{
 			var spr:StrumNote = playerStrums.members[key];
 			if (spr != null)

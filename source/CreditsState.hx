@@ -106,8 +106,7 @@ class CreditsState extends MusicBeatState
 				"ange",
 				"Co-Musician",
 				"https://twitter.com/Angesilly",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, nulla at semper malesuada, mauris nisi vehicula felis, vitae sodales libero est at sem. Donec quis lorem quis orci facilisis blandit."
-			],
+				"i know you read this"
 			[
 				"Loof",
 				"fister",

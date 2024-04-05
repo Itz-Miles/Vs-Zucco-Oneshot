@@ -26,7 +26,7 @@
 				[
 					[
 						"Camera Follow Pos",
-						"750",
+						"350",
 						"750"
 					],
 					[
@@ -36,8 +36,8 @@
 					],
 					[
 						"Add Camera Zoom",
-						"0.05",
-						"0.05"
+						"0.03",
+						"0.03"
 					],
 					[
 						"Change Character",

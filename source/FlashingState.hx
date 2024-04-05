@@ -9,6 +9,7 @@ import flixel.effects.FlxFlicker;
 import lime.app.Application;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
 import flixel.addons.display.FlxBackdrop;
 
@@ -81,7 +82,8 @@ class FlashingState extends MusicBeatState
 					});
 				} else {
 					FlxG.sound.play(Paths.sound('selec'));
-					FlxTween.tween(warnText, {alpha: 0}, 1, {
+					FlxTween.tween(warnText, {y: 2000}, 2.2, {ease: FlxEase.expoInOut});
+					FlxTween.tween(warnText, {alpha: 1}, 1, {
 						onComplete: function (twn:FlxTween) {
 							MusicBeatState.switchState(new TitleState());
 						}

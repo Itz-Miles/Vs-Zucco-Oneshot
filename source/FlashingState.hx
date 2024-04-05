@@ -73,14 +73,14 @@ class FlashingState extends MusicBeatState
 				if(!back) {
 					ClientPrefs.flashing = false;
 					ClientPrefs.saveSettings();
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+					FlxG.sound.play(Paths.sound('selec'));
 					FlxFlicker.flicker(warnText, 1, 0.1, false, true, function(flk:FlxFlicker) {
 						new FlxTimer().start(0.5, function (tmr:FlxTimer) {
 							MusicBeatState.switchState(new TitleState());
 						});
 					});
 				} else {
-					FlxG.sound.play(Paths.sound('cancelMenu'));
+					FlxG.sound.play(Paths.sound('selec'));
 					FlxTween.tween(warnText, {alpha: 0}, 1, {
 						onComplete: function (twn:FlxTween) {
 							MusicBeatState.switchState(new TitleState());
